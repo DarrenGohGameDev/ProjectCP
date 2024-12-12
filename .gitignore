@@ -7,6 +7,12 @@
 *.o
 *.obj
 
+#Assets file are to big better ignore I just want to git commit the code
+*.gltf
+*.glb
+*.fbx
+
+
 # Precompiled Headers
 *.gch
 *.pch

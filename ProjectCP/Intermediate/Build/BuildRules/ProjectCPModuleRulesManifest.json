@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"H:\\UE5Project\\ProjectCP\\ProjectCP\\Source\\ProjectCP\\ProjectCP.Build.cs",
+		"H:\\UE5Project\\ProjectCP\\ProjectCP\\Source\\ProjectCP.Target.cs",
+		"H:\\UE5Project\\ProjectCP\\ProjectCP\\Source\\ProjectCPEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}
