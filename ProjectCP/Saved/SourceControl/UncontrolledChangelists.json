@@ -1,0 +1,16 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IMC_Player.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_MovementPlayer.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_IneractPlayer.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_ShootingPlayer.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Levels/Testing.umap"
+			]
+		}
+	]
+}

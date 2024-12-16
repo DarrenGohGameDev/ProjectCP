@@ -11,6 +11,9 @@
     <None Include="..\..\Source\ProjectCPEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.editorconfig" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\shadertoolsconfig.json" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +40,36 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectCP\ProjectCP.h">
       <Filter>Source\ProjectCP</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Private">
+      <UniqueIdentifier>{F0E3F8D2-5621-3424-A4DC-CCCDA9A21A12}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\BasePlayerController.cpp">
+      <Filter>Source\ProjectCP\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\ActorComponent">
+      <UniqueIdentifier>{D5B0748B-F54C-3C4C-AFBF-1D89EB5C62E0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ProjectCP\Private\ActorComponent\Attribute">
+      <UniqueIdentifier>{1B9A153D-7252-3F89-8202-04BEABDDFD8D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\AttributeComponent.cpp">
+      <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Public">
+      <UniqueIdentifier>{3E4A3BAE-8F61-30B3-9B2C-C43080CA23E1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\BasePlayerController.h">
+      <Filter>Source\ProjectCP\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\ActorComponent">
+      <UniqueIdentifier>{0B92A2E7-3537-3E73-B0A5-89E2AFF039A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ProjectCP\Public\ActorComponent\Attribute">
+      <UniqueIdentifier>{A6F68866-D7E3-3C46-883D-A439CA00AD38}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\AttributeComponent.h">
+      <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
