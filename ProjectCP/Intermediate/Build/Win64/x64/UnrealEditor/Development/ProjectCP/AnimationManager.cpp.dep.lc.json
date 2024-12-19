@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\private\\managers\\animationmanager.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\projectcpeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectcp\\definitions.projectcp.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\animationmanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\animationmanager.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

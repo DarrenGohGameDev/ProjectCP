@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\charactermovementmanager.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\projectcpeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectcp\\definitions.projectcp.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\charactermovementmanager.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\charactermovementmanager.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

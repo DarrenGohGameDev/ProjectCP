@@ -9,7 +9,12 @@
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_MovementPlayer.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_IneractPlayer.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_ShootingPlayer.uasset",
-				"H:/UE5Project/ProjectCP/ProjectCP/Content/Levels/Testing.umap"
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Levels/Testing.umap",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/Character/TestBP_char.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/GameMode/BP_TestGameMode.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_JiumpPlayer.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/Character/BP_PlayerChar.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_LookPlayer.uasset"
 			]
 		}
 	]

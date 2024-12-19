@@ -1,0 +1,39 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\private\\managers\\inputmanager.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\projectcpeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectcp\\definitions.projectcp.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\inputmanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\inputmanager.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputsubsystems.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputsubsysteminterface.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedplayerinput.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\playerinput.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\public\\gesturerecognizer.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\public\\keystate.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\playerinput.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputaction.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmodifiers.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputmodifiers.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputtriggers.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputtriggers.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputaction.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedplayerinput.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\playermappablekeyslot.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\playermappablekeyslot.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsysteminterface.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsystems.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\enhancedinputcomponent.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputcomponent.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\charactermovementmanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\charactermovementmanager.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

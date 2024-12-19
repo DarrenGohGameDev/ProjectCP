@@ -56,6 +56,51 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\AttributeComponent.cpp">
       <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\DefenceComponent.cpp">
+      <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\HealthComponent.cpp">
+      <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\ManaComponent.cpp">
+      <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\ResistanceComponent.cpp">
+      <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\StaminaComponent.cpp">
+      <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\Character">
+      <UniqueIdentifier>{289622B6-BF9E-34C6-8FAE-3571A9D01D20}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Character\BaseCharacter.cpp">
+      <Filter>Source\ProjectCP\Private\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Character\PlayerCharacter.cpp">
+      <Filter>Source\ProjectCP\Private\Character</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\Interface">
+      <UniqueIdentifier>{3D30DDEB-2C98-3E6F-A030-E0FA2A014EC5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Interface\IPlayerMovable.cpp">
+      <Filter>Source\ProjectCP\Private\Interface</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\Managers">
+      <UniqueIdentifier>{4CEBAA1A-C6CE-366F-92FF-F9F7384BDDBA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\AnimationManager.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\CharacterMovementManager.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InputManager.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\StatsManager.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
     <Filter Include="Source\ProjectCP\Public">
       <UniqueIdentifier>{3E4A3BAE-8F61-30B3-9B2C-C43080CA23E1}</UniqueIdentifier>
     </Filter>
@@ -70,6 +115,51 @@
     </Filter>
     <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\AttributeComponent.h">
       <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\DefenceComponent.h">
+      <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\HealthComponent.h">
+      <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\ManaComponent.h">
+      <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\ResistanceComponent.h">
+      <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\StaminaComponent.h">
+      <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\Character">
+      <UniqueIdentifier>{E4E65BB6-CE6A-333C-BBD4-FC9190B0D933}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Character\BaseCharacter.h">
+      <Filter>Source\ProjectCP\Public\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Character\PlayerCharacter.h">
+      <Filter>Source\ProjectCP\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\Interface">
+      <UniqueIdentifier>{9F2A749B-9DAA-31BE-8604-7EC4D4BB7387}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\IPlayerMovable.h">
+      <Filter>Source\ProjectCP\Public\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\Managers">
+      <UniqueIdentifier>{7B96CFA5-C616-393E-8A23-5D59E6AB22F5}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\AnimationManager.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\CharacterMovementManager.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InputManager.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\StatsManager.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
