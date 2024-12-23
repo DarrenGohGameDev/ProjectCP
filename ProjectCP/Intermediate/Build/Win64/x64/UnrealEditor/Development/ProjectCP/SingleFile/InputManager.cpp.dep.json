@@ -606,7 +606,9 @@
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\inputcomponent.generated.h",
             "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputcomponent.generated.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\charactermovementmanager.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\charactermovementmanager.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\charactermovementmanager.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\weaponmanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\weaponmanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

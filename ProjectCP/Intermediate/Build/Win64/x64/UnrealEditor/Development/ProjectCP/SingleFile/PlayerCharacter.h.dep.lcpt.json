@@ -431,6 +431,7 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\algo\\impl\\rangepointertype.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\ray.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\vector2dhalf.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\character\\basecharacter.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectmacros.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\script.h",
@@ -659,6 +660,7 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\basecharacter.generated.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\playercharacter.generated.h"
         ],
         "ImportedModules": [],

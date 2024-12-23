@@ -4,12 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "InputActionValue.h"
 #include "InputManager.generated.h"
 
 
 class UInputAction;
 class UInputMappingContext;
 class UCharacterMovementManager;
+class UWeaponManager;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class PROJECTCP_API UInputManager : public UActorComponent
@@ -43,9 +45,13 @@ protected:
 
 	virtual void SetupInputBinding(APlayerController* playerController);
 
-	UCharacterMovementManager* CharacterMovementManager;
+	UCharacterMovementManager* characterMovementManager;
+
+	UWeaponManager* characterWeaponManager;
 
 private : 
 	APlayerController * GetOwnerController();
+
+	void InputUseCurrentWeapon(const FInputActionValue& value);
 		
 };

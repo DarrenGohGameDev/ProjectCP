@@ -558,6 +558,13 @@
             "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.38.33130\\include\\sanitizer\\common_interface_defs.h",
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\actorcomponent.generated.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\net\\core\\public\\net\\core\\pushmodel\\pushmodelmacros.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\inputcore\\classes\\inputcoretypes.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\misc\\attribute.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\misc\\tvariant.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\misc\\tvariantmeta.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\inputcore\\uht\\inputcoretypes.generated.h",
+            "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\charactermovementmanager.generated.h"
         ],
         "ImportedModules": [],

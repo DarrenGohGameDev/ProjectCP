@@ -1,5 +1,42 @@
 {
 	"RemapUnityFiles": 
 	{
+		"Module.ProjectCP.cpp.obj": [
+			"AnimationManager.gen.cpp.obj",
+			"AttributeComponent.gen.cpp.obj",
+			"BaseCharacter.gen.cpp.obj",
+			"BasePlayerController.gen.cpp.obj",
+			"CharacterMovementManager.gen.cpp.obj",
+			"DefenceComponent.gen.cpp.obj",
+			"HealthComponent.gen.cpp.obj",
+			"InputManager.gen.cpp.obj",
+			"ManaComponent.gen.cpp.obj",
+			"PlayerCharacter.gen.cpp.obj",
+			"ResistanceComponent.gen.cpp.obj",
+			"StaminaComponent.gen.cpp.obj",
+			"StatsManager.gen.cpp.obj",
+			"AttributeComponent.cpp.obj",
+			"DefenceComponent.cpp.obj",
+			"HealthComponent.cpp.obj",
+			"ManaComponent.cpp.obj",
+			"ResistanceComponent.cpp.obj",
+			"StaminaComponent.cpp.obj",
+			"BasePlayerController.cpp.obj",
+			"BaseCharacter.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"AnimationManager.cpp.obj",
+			"CharacterMovementManager.cpp.obj",
+			"StatsManager.cpp.obj",
+			"ProjectCP.cpp.obj",
+			"BaseRangeWeapon.gen.cpp.obj",
+			"ProjectCP.init.gen.cpp.obj",
+			"RangeWeaponInterface.gen.cpp.obj",
+			"WeaponManager.gen.cpp.obj",
+			"WeaponState.gen.cpp.obj",
+			"RangeWeaponInterface.cpp.obj",
+			"InputManager.cpp.obj",
+			"WeaponManager.cpp.obj",
+			"BaseRangeWeapon.cpp.obj"
+		]
 	}
 }
