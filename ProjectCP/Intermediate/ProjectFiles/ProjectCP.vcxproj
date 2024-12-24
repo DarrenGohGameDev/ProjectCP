@@ -299,7 +299,13 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Character\PlayerCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Interface\PickUpInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Interface\RangeWeaponInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Item\BaseItem.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\AnimationManager.cpp">
@@ -309,6 +315,9 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InputManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InventoryManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\StatsManager.cpp">
@@ -329,11 +338,15 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\StaminaComponent.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Character\BaseCharacter.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Character\PlayerCharacter.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\ItemType.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\WeaponState.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\PickUpInterface.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\RangeWeaponInterface.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Item\BaseItem.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\AnimationManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\CharacterMovementManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InputManager.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InventoryManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\StatsManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\WeaponManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Weapon\BaseRangeWeapon.h"/>

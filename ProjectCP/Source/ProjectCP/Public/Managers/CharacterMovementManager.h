@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "InputActionValue.h"
 #include "CharacterMovementManager.generated.h"
 
 
@@ -19,11 +18,11 @@ public:
 
 	void Init(AController* playerController,ACharacter* playerCharacther);
 
-	void Move(const FInputActionValue& value);
+	void Move(FVector2D value);
 
 	void Jump();
 
-	void Look(const FInputActionValue& value);
+	void Look(FVector2D value);
 
 protected:
 	// Called when the game starts

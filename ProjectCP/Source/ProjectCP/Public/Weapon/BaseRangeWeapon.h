@@ -5,10 +5,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Interface/RangeWeaponInterface.h"
+#include "Item/BaseItem.h"
 #include "BaseRangeWeapon.generated.h"
 
 UCLASS()
-class PROJECTCP_API ABaseRangeWeapon : public AActor , public IRangeWeaponInterface
+class PROJECTCP_API ABaseRangeWeapon : public ABaseItem, public IRangeWeaponInterface
 {
 	GENERATED_BODY()
 	
@@ -48,14 +49,14 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 	float fireRate = 10.f;
 
-	//UPROPERTY(VisibleAnywhere, BlueprintCallable, Category = "Weapon")
+	UPROPERTY(VisibleAnywhere, Category = "Weapon")
 	EWeaponState  currentWeaponState = EWeaponState::EWS_Ready;
 
 private:	
 
 	int32 currentAmmo;
 
-	FORCEINLINE void UseAmmo() { currentAmmo -= useAmmoPerShot; }
+	void UseAmmo();
 
 	FORCEINLINE void SetCurrentAmmo() { currentAmmo = maxAmmo; }
 };

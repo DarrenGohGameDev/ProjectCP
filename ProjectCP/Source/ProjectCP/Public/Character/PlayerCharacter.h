@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Character/BaseCharacter.h"
 #include "GameFramework/Character.h"
+#include "Interface/PickUpInterface.h"
 #include "PlayerCharacter.generated.h"
 
 class UInputManager;
@@ -12,7 +13,7 @@ class UCameraComponent;
 class USpringArmComponent;
 
 UCLASS()
-class PROJECTCP_API APlayerCharacter : public ABaseCharacter
+class PROJECTCP_API APlayerCharacter : public ABaseCharacter, public IPickUpInterface
 {
 	GENERATED_BODY()
 

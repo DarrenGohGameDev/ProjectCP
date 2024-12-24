@@ -40,28 +40,33 @@ struct Z_Construct_UClass_UInputManager_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Public/Managers/InputManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IA_walk_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_walkIA_MetaData[] = {
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Public/Managers/InputManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IA_shoot_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_shootIA_MetaData[] = {
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Public/Managers/InputManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IA_jump_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_jumpIA_MetaData[] = {
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Public/Managers/InputManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IA_look_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_lookIA_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Public/Managers/InputManager.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_interactIA_MetaData[] = {
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Public/Managers/InputManager.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_IMC_player;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_IA_walk;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_IA_shoot;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_IA_jump;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_IA_look;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_walkIA;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_shootIA;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_jumpIA;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_lookIA;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_interactIA;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -70,16 +75,18 @@ struct Z_Construct_UClass_UInputManager_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_IMC_player = { "IMC_player", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, IMC_player), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IMC_player_MetaData), NewProp_IMC_player_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_IA_walk = { "IA_walk", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, IA_walk), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IA_walk_MetaData), NewProp_IA_walk_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_IA_shoot = { "IA_shoot", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, IA_shoot), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IA_shoot_MetaData), NewProp_IA_shoot_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_IA_jump = { "IA_jump", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, IA_jump), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IA_jump_MetaData), NewProp_IA_jump_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_IA_look = { "IA_look", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, IA_look), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IA_look_MetaData), NewProp_IA_look_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_walkIA = { "walkIA", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, walkIA), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_walkIA_MetaData), NewProp_walkIA_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_shootIA = { "shootIA", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, shootIA), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_shootIA_MetaData), NewProp_shootIA_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_jumpIA = { "jumpIA", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, jumpIA), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_jumpIA_MetaData), NewProp_jumpIA_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_lookIA = { "lookIA", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, lookIA), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_lookIA_MetaData), NewProp_lookIA_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInputManager_Statics::NewProp_interactIA = { "interactIA", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInputManager, interactIA), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_interactIA_MetaData), NewProp_interactIA_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInputManager_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_IMC_player,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_IA_walk,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_IA_shoot,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_IA_jump,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_IA_look,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_walkIA,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_shootIA,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_jumpIA,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_lookIA,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInputManager_Statics::NewProp_interactIA,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInputManager_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UInputManager_Statics::DependentSingletons[])() = {
@@ -122,10 +129,10 @@ UInputManager::~UInputManager() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InputManager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInputManager, UInputManager::StaticClass, TEXT("UInputManager"), &Z_Registration_Info_UClass_UInputManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInputManager), 2393426610U) },
+		{ Z_Construct_UClass_UInputManager, UInputManager::StaticClass, TEXT("UInputManager"), &Z_Registration_Info_UClass_UInputManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInputManager), 1029195203U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InputManager_h_2606766783(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InputManager_h_2322302905(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InputManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InputManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

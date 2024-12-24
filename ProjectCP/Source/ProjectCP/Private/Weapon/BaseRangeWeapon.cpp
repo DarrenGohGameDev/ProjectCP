@@ -8,7 +8,7 @@ ABaseRangeWeapon::ABaseRangeWeapon()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	itemType = EItemType::EIT_Weapon;
 }
 
 // Called when the game starts or when spawned
@@ -50,7 +50,14 @@ void ABaseRangeWeapon::Shoot_Implementation()
 	if (currentWeaponState != EWeaponState::EWS_Ready && currentAmmo <= 0) return;
 	
 	currentWeaponState = EWeaponState::EWS_Shooting;
+	UE_LOG(LogTemp, Warning, TEXT("shooting weapon"));
 	UseAmmo();
+}
+
+void ABaseRangeWeapon::UseAmmo()
+{
+	currentAmmo -= useAmmoPerShot;
+	UE_LOG(LogTemp, Warning, TEXT("using weapon ammo"));
 }
 
 void ABaseRangeWeapon::Reload_Implementation()

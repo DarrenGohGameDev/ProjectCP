@@ -31,20 +31,18 @@ void UCharacterMovementManager::Init(AController* playerController,ACharacter* p
 	mPlayerCharacther = playerCharacther;
 }
 
-void UCharacterMovementManager::Move(const FInputActionValue& value)
+void UCharacterMovementManager::Move(FVector2D value)
 {
-	const FVector2D MovementVector = value.Get<FVector2D>();
-
 	if (mPlayerController)
 	{
 		const FRotator Rotation = mPlayerController->GetControlRotation();
 		const FRotator YawRotation(0.f, Rotation.Yaw, 0.f);
 
 		const FVector Forward = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-		mPlayerPawn->AddMovementInput(Forward, MovementVector.Y);
+		mPlayerPawn->AddMovementInput(Forward, value.Y);
 
 		const FVector Right = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-		mPlayerPawn->AddMovementInput(Right, MovementVector.X);
+		mPlayerPawn->AddMovementInput(Right, value.X);
 	}
 }
 
@@ -56,14 +54,12 @@ void UCharacterMovementManager::Jump()
 	}
 }
 
-void UCharacterMovementManager::Look(const FInputActionValue& value)
+void UCharacterMovementManager::Look(FVector2D value)
 {
-	const FVector2D LookAxisValue = value.Get<FVector2D>();
-
 	if (mPlayerController)
 	{
-		mPlayerPawn->AddControllerYawInput(LookAxisValue.X);
-		mPlayerPawn->AddControllerPitchInput(LookAxisValue.Y);
+		mPlayerPawn->AddControllerYawInput(value.X);
+		mPlayerPawn->AddControllerPitchInput(value.Y);
 	}
 }
 

@@ -32,3 +32,11 @@ void UWeaponManager::UseCurrentWeapon()
 		primaryWeapon->Shoot_Implementation();
 	}
 }
+
+void UWeaponManager::EquipToPrimaryWeapon(ABaseRangeWeapon* newWeapon)
+{
+	if (primaryWeapon == nullptr)
+	{
+		primaryWeapon = newWeapon;
+	}
+}

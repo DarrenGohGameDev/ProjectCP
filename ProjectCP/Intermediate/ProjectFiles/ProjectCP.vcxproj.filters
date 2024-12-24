@@ -83,8 +83,17 @@
     <Filter Include="Source\ProjectCP\Private\Interface">
       <UniqueIdentifier>{3D30DDEB-2C98-3E6F-A030-E0FA2A014EC5}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Interface\PickUpInterface.cpp">
+      <Filter>Source\ProjectCP\Private\Interface</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Interface\RangeWeaponInterface.cpp">
       <Filter>Source\ProjectCP\Private\Interface</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\Item">
+      <UniqueIdentifier>{AAB65AAE-BC3C-3CC0-92CF-40D93599F884}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Item\BaseItem.cpp">
+      <Filter>Source\ProjectCP\Private\Item</Filter>
     </ClCompile>
     <Filter Include="Source\ProjectCP\Private\Managers">
       <UniqueIdentifier>{4CEBAA1A-C6CE-366F-92FF-F9F7384BDDBA}</UniqueIdentifier>
@@ -96,6 +105,9 @@
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InputManager.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InventoryManager.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\StatsManager.cpp">
@@ -152,14 +164,26 @@
     <Filter Include="Source\ProjectCP\Public\Enums">
       <UniqueIdentifier>{76F002D5-ACA7-3DE9-8A06-8402BF697A37}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\ItemType.h">
+      <Filter>Source\ProjectCP\Public\Enums</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\WeaponState.h">
       <Filter>Source\ProjectCP\Public\Enums</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\Interface">
       <UniqueIdentifier>{9F2A749B-9DAA-31BE-8604-7EC4D4BB7387}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\PickUpInterface.h">
+      <Filter>Source\ProjectCP\Public\Interface</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\RangeWeaponInterface.h">
       <Filter>Source\ProjectCP\Public\Interface</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\Item">
+      <UniqueIdentifier>{E2883320-34F4-3AE2-AA5C-4F61C90608D7}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Item\BaseItem.h">
+      <Filter>Source\ProjectCP\Public\Item</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\Managers">
       <UniqueIdentifier>{7B96CFA5-C616-393E-8A23-5D59E6AB22F5}</UniqueIdentifier>
@@ -171,6 +195,9 @@
       <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InputManager.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InventoryManager.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\StatsManager.h">
