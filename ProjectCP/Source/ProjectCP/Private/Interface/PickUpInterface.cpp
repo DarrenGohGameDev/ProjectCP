@@ -6,6 +6,6 @@
 
 // Add default functionality here for any IPickUpInterface functions that are not pure virtual.
 
-void IPickUpInterface::SetOverlappingItem(ABaseItem* Item)
+void IPickUpInterface::SetOverlappingItem(AActor* Item)
 {
 }

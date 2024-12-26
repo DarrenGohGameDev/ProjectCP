@@ -7,7 +7,10 @@
         "Includes": [
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectcp\\definitions.projectcp.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\interface\\pickupinterface.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\pickupinterface.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\pickupinterface.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\item\\baseitem.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\itemtype.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\baseitem.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

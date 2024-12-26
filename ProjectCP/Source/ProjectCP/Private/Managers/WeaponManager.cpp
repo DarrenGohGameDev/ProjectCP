@@ -40,3 +40,11 @@ void UWeaponManager::EquipToPrimaryWeapon(ABaseRangeWeapon* newWeapon)
 		primaryWeapon = newWeapon;
 	}
 }
+
+void UWeaponManager::ReloadCurrentWeapon()
+{
+	if (primaryWeapon)
+	{
+		primaryWeapon->Reload_Implementation();
+	}
+}

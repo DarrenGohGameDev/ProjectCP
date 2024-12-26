@@ -6,6 +6,7 @@
 #include "Item/BaseItem.h"
 #include "Enums/ItemType.h"
 #include "Weapon/BaseRangeWeapon.h"
+#include "Managers/DelegateManager.h"
 
 // Sets default values for this component's properties
 UInventoryManager::UInventoryManager()
@@ -21,20 +22,31 @@ UInventoryManager::UInventoryManager()
 void UInventoryManager::BeginPlay()
 {
 	Super::BeginPlay();
-
+	OnItemOverlap();
 	// ...
 	
+}
+
+void UInventoryManager::OnItemOverlap()
+{
+	if (!mBindPickUp)
+	{
+		UDelegateManager::Get()->OnItemOverlap.AddDynamic(this, &UInventoryManager::SetOverlappingItem);
+		mBindPickUp = true;
+	}
 }
 
 void UInventoryManager::Init(FVector cameraLocation)
 {
 	mCameraLocation = cameraLocation;
+	
 }
 
 void UInventoryManager::PickUpItem()
 {
+	
 	if (mOverlapItem == nullptr) return;
-
+	UE_LOG(LogTemp, Warning, TEXT("picking up item"));
 	if (mOverlapItem->GetItemType() == EItemType::EIT_Weapon)
 	{
 		ABaseRangeWeapon * newRangeWeapon = Cast<ABaseRangeWeapon>(mOverlapItem);
@@ -43,10 +55,21 @@ void UInventoryManager::PickUpItem()
 	}
 }
 
-void UInventoryManager::SetOverlappingItem(ABaseItem* Item)
+void UInventoryManager::SetOverlappingItem(AActor* item)
 {
-	UE_LOG(LogTemp, Warning, TEXT("set overlapped an item"));
-	mOverlapItem = Item;
+	if (item == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("overlappp item is null"));
+		mOverlapItem = nullptr;
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Handled Item Pickup: %s"), *item->GetName());
+		ABaseItem* overlapItem = Cast<ABaseItem>(item);
+		mOverlapItem = overlapItem;
+		UE_LOG(LogTemp, Warning, TEXT("set overlapped an item"));
+	}
+	
 }
 
 void UInventoryManager::TriggerTestDelegate(ABaseItem* item)

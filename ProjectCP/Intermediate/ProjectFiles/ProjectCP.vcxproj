@@ -314,6 +314,12 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\CharacterMovementManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\DelegateManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\GameManagers.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InputManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -324,6 +330,12 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\WeaponManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\MyHUD.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerHud.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Weapon\BaseRangeWeapon.cpp">
@@ -345,10 +357,14 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\Item\BaseItem.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\AnimationManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\CharacterMovementManager.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\DelegateManager.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\GameManagers.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InputManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InventoryManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\StatsManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\WeaponManager.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\MyHUD.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerHud.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Weapon\BaseRangeWeapon.h"/>
   </ItemGroup>
   <PropertyGroup>

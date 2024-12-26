@@ -49,25 +49,50 @@ void ABaseRangeWeapon::Shoot_Implementation()
 {
 	if (currentWeaponState != EWeaponState::EWS_Ready && currentAmmo <= 0) return;
 	
-	currentWeaponState = EWeaponState::EWS_Shooting;
+	//currentWeaponState = EWeaponState::EWS_Shooting;
 	UE_LOG(LogTemp, Warning, TEXT("shooting weapon"));
 	UseAmmo();
 }
 
-void ABaseRangeWeapon::UseAmmo()
-{
-	currentAmmo -= useAmmoPerShot;
-	UE_LOG(LogTemp, Warning, TEXT("using weapon ammo"));
-}
-
 void ABaseRangeWeapon::Reload_Implementation()
 {
-	currentWeaponState = EWeaponState::EWS_Reloading;
-	SetCurrentAmmo_Implementation(maxAmmo);
+	WeaponReloadCooldown(reloadSpeed);
 }
 
 void ABaseRangeWeapon::FinishReloading_Implementation()
 {
+	SetCurrentAmmo_Implementation(maxAmmo);
+	GetWorldTimerManager().ClearTimer(mWeaponReloadCooldown);
 	currentWeaponState = EWeaponState::EWS_Ready;
 }
 
+void ABaseRangeWeapon::UseAmmo()
+{
+	if (currentAmmo > 0)
+	{
+		currentAmmo -= useAmmoPerShot;
+		UE_LOG(LogTemp, Warning, TEXT("using weapon ammo remainng current ammo is %d"), currentAmmo);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("out of weapon ammo remainng current ammo is %d"), currentAmmo);
+	}
+}
+
+void ABaseRangeWeapon::WeaponCooldown(float time)
+{
+	currentWeaponState = EWeaponState::EWS_NotReady;
+	GetWorldTimerManager().SetTimer(mWeaponFireRateCooldown, this,&ABaseRangeWeapon::WeaponReady,time);
+}
+
+void ABaseRangeWeapon::WeaponReloadCooldown(float time)
+{
+	currentWeaponState = EWeaponState::EWS_Reloading;
+	GetWorldTimerManager().SetTimer(mWeaponReloadCooldown, this, &ABaseRangeWeapon::FinishReloading_Implementation, time);
+}
+
+void ABaseRangeWeapon::WeaponReady()
+{
+	GetWorldTimerManager().ClearTimer(mWeaponFireRateCooldown);
+	currentWeaponState = EWeaponState::EWS_Ready;
+}

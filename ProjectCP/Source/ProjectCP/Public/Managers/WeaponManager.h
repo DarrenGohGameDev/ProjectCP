@@ -21,10 +21,13 @@ public:
 
 	void EquipToPrimaryWeapon(ABaseRangeWeapon * newWeapon);
 
+	void ReloadCurrentWeapon();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	UPROPERTY(VisibleInstanceOnly)
 	ABaseRangeWeapon* primaryWeapon;
 
 private:	

@@ -5,16 +5,10 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Interface/PickUpInterface.h"
-#include "Delegates/Delegate.h"
-#include "UObject/ScriptDelegates.h"
 #include "InventoryManager.generated.h"
 
 class UWeaponManager;
 class ABaseItem;
-
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnItemOverlap, ABaseItem*, OverlapItem);
-
-//DECLARE_DELEGATE_OneParam(FOnItemOverlap, AActor);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class PROJECTCP_API UInventoryManager : public UActorComponent , public IPickUpInterface
@@ -29,15 +23,14 @@ public:
 
 	void PickUpItem();
 
-	virtual void SetOverlappingItem(class ABaseItem* Item) override;
+	virtual void SetOverlappingItem(AActor* item) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Events")
 	void TriggerTestDelegate(ABaseItem* item);
 
+	UPROPERTY(VisibleInstanceOnly)
 	UWeaponManager* weaponManager;
 
-	UPROPERTY(BlueprintAssignable, Category = "Events")
-	FOnItemOverlap OnItemOverlap;
 
 
 protected:
@@ -46,9 +39,13 @@ protected:
 
 private:	
 
+	void OnItemOverlap();
+
 	FVector mCameraLocation;
 	
 	UPROPERTY(VisibleInstanceOnly)
 	ABaseItem* mOverlapItem;
+
+	bool mBindPickUp = false;
 
 };

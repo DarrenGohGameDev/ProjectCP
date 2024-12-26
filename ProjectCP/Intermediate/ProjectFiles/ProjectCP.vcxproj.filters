@@ -104,6 +104,12 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\CharacterMovementManager.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\DelegateManager.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\GameManagers.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InputManager.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
@@ -115,6 +121,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\WeaponManager.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\UI">
+      <UniqueIdentifier>{996B5DDC-B19B-3808-897A-B41E8CE8FB50}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\MyHUD.cpp">
+      <Filter>Source\ProjectCP\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerHud.cpp">
+      <Filter>Source\ProjectCP\Private\UI</Filter>
     </ClCompile>
     <Filter Include="Source\ProjectCP\Private\Weapon">
       <UniqueIdentifier>{760AEBF3-61B9-320D-85CC-D5F0CCAA6339}</UniqueIdentifier>
@@ -194,6 +209,12 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\CharacterMovementManager.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\DelegateManager.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\GameManagers.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InputManager.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
@@ -205,6 +226,15 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\WeaponManager.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\UI">
+      <UniqueIdentifier>{FE7F660A-8ECB-39E2-B750-69F20BCACB45}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\MyHUD.h">
+      <Filter>Source\ProjectCP\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerHud.h">
+      <Filter>Source\ProjectCP\Public\UI</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\Weapon">
       <UniqueIdentifier>{27ED8ACE-FF2D-3EEC-B92F-25432BFEC350}</UniqueIdentifier>

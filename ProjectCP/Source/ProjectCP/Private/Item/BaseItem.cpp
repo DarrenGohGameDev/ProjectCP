@@ -3,7 +3,8 @@
 
 #include "Item/BaseItem.h"
 #include "Components/SphereComponent.h"
-#include "Interface/PickUpInterface.h"
+#include "Character/PlayerCharacter.h"
+#include "Managers/DelegateManager.h"
 
 // Sets default values
 ABaseItem::ABaseItem()
@@ -38,23 +39,25 @@ void ABaseItem::Tick(float DeltaTime)
 
 void ABaseItem::OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	IPickUpInterface* pickUpInterface = Cast<IPickUpInterface>(OtherActor);
-	UE_LOG(LogTemp, Warning, TEXT("overlap an actor"));
-	if (pickUpInterface)
+	APlayerCharacter* player = Cast<APlayerCharacter>(OtherActor);
+	if (player)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("overlap an player"));
-		pickUpInterface->SetOverlappingItem(this);
+		if (UDelegateManager::Get()->OnItemOverlap.IsBound())
+		{
+			UDelegateManager::Get()->OnItemOverlap.Broadcast(this);
+		}
 	}
 }
 
 void ABaseItem::OnSphereOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	IPickUpInterface* pickUpInterface = Cast<IPickUpInterface>(OtherActor);
-	UE_LOG(LogTemp, Warning, TEXT("stop overlap an actor"));
-	if (pickUpInterface)
+	APlayerCharacter* player = Cast<APlayerCharacter>(OtherActor);
+	if (player)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("stop overlap an player"));
-		pickUpInterface->SetOverlappingItem(nullptr);
+		if (UDelegateManager::Get()->OnItemOverlap.IsBound())
+		{
+			UDelegateManager::Get()->OnItemOverlap.Broadcast(nullptr);
+		}
 	}
 }
 

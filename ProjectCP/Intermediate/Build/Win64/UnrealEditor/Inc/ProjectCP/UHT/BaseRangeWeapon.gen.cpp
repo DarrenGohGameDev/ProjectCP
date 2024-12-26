@@ -44,6 +44,16 @@ struct Z_Construct_UClass_ABaseRangeWeapon_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_fireRate_MetaData[] = {
 		{ "Category", "Weapon" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// the lower the firerate the faster it shoot\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Weapon/BaseRangeWeapon.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "the lower the firerate the faster it shoot" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_reloadSpeed_MetaData[] = {
+		{ "Category", "Weapon" },
 		{ "ModuleRelativePath", "Public/Weapon/BaseRangeWeapon.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_currentWeaponState_MetaData[] = {
@@ -54,6 +64,7 @@ struct Z_Construct_UClass_ABaseRangeWeapon_Statics
 	static const UECodeGen_Private::FIntPropertyParams NewProp_maxAmmo;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_useAmmoPerShot;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_fireRate;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_reloadSpeed;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_currentWeaponState_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_currentWeaponState;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -67,12 +78,14 @@ struct Z_Construct_UClass_ABaseRangeWeapon_Statics
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_maxAmmo = { "maxAmmo", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseRangeWeapon, maxAmmo), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_maxAmmo_MetaData), NewProp_maxAmmo_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_useAmmoPerShot = { "useAmmoPerShot", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseRangeWeapon, useAmmoPerShot), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_useAmmoPerShot_MetaData), NewProp_useAmmoPerShot_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_fireRate = { "fireRate", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseRangeWeapon, fireRate), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_fireRate_MetaData), NewProp_fireRate_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_reloadSpeed = { "reloadSpeed", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseRangeWeapon, reloadSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_reloadSpeed_MetaData), NewProp_reloadSpeed_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_currentWeaponState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_currentWeaponState = { "currentWeaponState", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseRangeWeapon, currentWeaponState), Z_Construct_UEnum_ProjectCP_EWeaponState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_currentWeaponState_MetaData), NewProp_currentWeaponState_MetaData) }; // 3671116167
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_currentWeaponState = { "currentWeaponState", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseRangeWeapon, currentWeaponState), Z_Construct_UEnum_ProjectCP_EWeaponState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_currentWeaponState_MetaData), NewProp_currentWeaponState_MetaData) }; // 1005073513
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseRangeWeapon_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_maxAmmo,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_useAmmoPerShot,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_fireRate,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_reloadSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_currentWeaponState_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseRangeWeapon_Statics::NewProp_currentWeaponState,
 };
@@ -120,10 +133,10 @@ ABaseRangeWeapon::~ABaseRangeWeapon() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseRangeWeapon, ABaseRangeWeapon::StaticClass, TEXT("ABaseRangeWeapon"), &Z_Registration_Info_UClass_ABaseRangeWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseRangeWeapon), 3532966788U) },
+		{ Z_Construct_UClass_ABaseRangeWeapon, ABaseRangeWeapon::StaticClass, TEXT("ABaseRangeWeapon"), &Z_Registration_Info_UClass_ABaseRangeWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseRangeWeapon), 1534350615U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_1815269086(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_1087305625(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

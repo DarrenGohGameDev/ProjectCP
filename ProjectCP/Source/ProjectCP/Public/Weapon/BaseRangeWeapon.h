@@ -46,8 +46,11 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 	int32 useAmmoPerShot = 10;
 
+	UPROPERTY(EditAnywhere, Category = "Weapon") // the lower the firerate the faster it shoot
+	float fireRate = 0.1f;
+
 	UPROPERTY(EditAnywhere, Category = "Weapon")
-	float fireRate = 10.f;
+	float reloadSpeed = 1.5f;
 
 	UPROPERTY(VisibleAnywhere, Category = "Weapon")
 	EWeaponState  currentWeaponState = EWeaponState::EWS_Ready;
@@ -58,5 +61,15 @@ private:
 
 	void UseAmmo();
 
+	void WeaponCooldown(float time);
+
+	void WeaponReloadCooldown(float time);
+
+	void WeaponReady();
+
 	FORCEINLINE void SetCurrentAmmo() { currentAmmo = maxAmmo; }
+
+	FTimerHandle  mWeaponFireRateCooldown;
+
+	FTimerHandle  mWeaponReloadCooldown;
 };

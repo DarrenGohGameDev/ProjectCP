@@ -33,18 +33,18 @@ struct Z_Construct_UEnum_ProjectCP_EWeaponState_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+		{ "EWS_NotReady.DisplayName", "NotReady" },
+		{ "EWS_NotReady.Name", "EWeaponState::EWS_NotReady" },
 		{ "EWS_Ready.DisplayName", "Ready" },
 		{ "EWS_Ready.Name", "EWeaponState::EWS_Ready" },
 		{ "EWS_Reloading.DisplayName", "Reloading" },
 		{ "EWS_Reloading.Name", "EWeaponState::EWS_Reloading" },
-		{ "EWS_Shooting.DisplayName", "Shooting" },
-		{ "EWS_Shooting.Name", "EWeaponState::EWS_Shooting" },
 		{ "ModuleRelativePath", "Public/Enums/WeaponState.h" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
 		{ "EWeaponState::EWS_Ready", (int64)EWeaponState::EWS_Ready },
-		{ "EWeaponState::EWS_Shooting", (int64)EWeaponState::EWS_Shooting },
+		{ "EWeaponState::EWS_NotReady", (int64)EWeaponState::EWS_NotReady },
 		{ "EWeaponState::EWS_Reloading", (int64)EWeaponState::EWS_Reloading },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
@@ -75,10 +75,10 @@ UEnum* Z_Construct_UEnum_ProjectCP_EWeaponState()
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Enums_WeaponState_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EWeaponState_StaticEnum, TEXT("EWeaponState"), &Z_Registration_Info_UEnum_EWeaponState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3671116167U) },
+		{ EWeaponState_StaticEnum, TEXT("EWeaponState"), &Z_Registration_Info_UEnum_EWeaponState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1005073513U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Enums_WeaponState_h_3611819508(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Enums_WeaponState_h_3292022181(TEXT("/Script/ProjectCP"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Enums_WeaponState_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Enums_WeaponState_h_Statics::EnumInfo));

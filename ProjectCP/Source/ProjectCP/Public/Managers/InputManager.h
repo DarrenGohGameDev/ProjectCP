@@ -48,13 +48,18 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	UInputAction* interactIA;
 
+	UPROPERTY(EditAnywhere, Category = "Input")
+	UInputAction* reloadIA;
+
+	UPROPERTY(VisibleInstanceOnly)
 	UCharacterMovementManager* characterMovementManager;
 
+	UPROPERTY(VisibleInstanceOnly)
 	UInventoryManager* characterInventoryManager;
 
 private : 
 	APlayerController * GetOwnerController();
-
+	// when refactor make a delgate with fvector2d for value and broadcastt it
 	void InputUseCurrentWeapon(const FInputActionValue& value);
 
 	void InputPickUpItem(const FInputActionValue& value);
@@ -64,5 +69,7 @@ private :
 	void InputMove(const FInputActionValue& value);
 
 	void InputLook(const FInputActionValue& value);
+
+	void InputReload(const FInputActionValue& value);
 		
 };

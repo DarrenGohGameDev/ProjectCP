@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FOREACH_ENUM_EWEAPONSTATE(op) \
 	op(EWeaponState::EWS_Ready) \
-	op(EWeaponState::EWS_Shooting) \
+	op(EWeaponState::EWS_NotReady) \
 	op(EWeaponState::EWS_Reloading) 
 
 enum class EWeaponState : uint8;

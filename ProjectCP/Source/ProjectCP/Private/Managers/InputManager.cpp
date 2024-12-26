@@ -79,6 +79,11 @@ void UInputManager::SetupInputBinding(APlayerController* playerController)
 			{
 				EnhancedInputComponent->BindAction(interactIA, ETriggerEvent::Triggered, this, &UInputManager::InputPickUpItem);
 			}
+
+			if (reloadIA)
+			{
+				EnhancedInputComponent->BindAction(interactIA, ETriggerEvent::Triggered, this, &UInputManager::InputReload);
+			}
 		}
 	}
 }
@@ -121,4 +126,9 @@ void UInputManager::InputLook(const FInputActionValue& value)
 {
 	const FVector2D LookAxisValue = value.Get<FVector2D>();
 	characterMovementManager->Look(LookAxisValue);
+}
+
+void UInputManager::InputReload(const FInputActionValue& value)
+{
+	characterInventoryManager->weaponManager->ReloadCurrentWeapon();
 }

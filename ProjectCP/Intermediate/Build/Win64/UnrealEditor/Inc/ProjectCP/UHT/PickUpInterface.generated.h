@@ -9,10 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef PROJECTCP_PickUpInterface_generated_h
 #error "PickUpInterface.generated.h already included, missing '#pragma once' in PickUpInterface.h"
 #endif
 #define PROJECTCP_PickUpInterface_generated_h
+
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Interface_PickUpInterface_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetOverlappingItem);
+
 
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Interface_PickUpInterface_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
@@ -58,6 +63,7 @@ public: \
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Interface_PickUpInterface_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Interface_PickUpInterface_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Interface_PickUpInterface_h_15_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
