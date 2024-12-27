@@ -131,6 +131,9 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerHud.cpp">
       <Filter>Source\ProjectCP\Private\UI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerUserWidget.cpp">
+      <Filter>Source\ProjectCP\Private\UI</Filter>
+    </ClCompile>
     <Filter Include="Source\ProjectCP\Private\Weapon">
       <UniqueIdentifier>{760AEBF3-61B9-320D-85CC-D5F0CCAA6339}</UniqueIdentifier>
     </Filter>
@@ -234,6 +237,9 @@
       <Filter>Source\ProjectCP\Public\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerHud.h">
+      <Filter>Source\ProjectCP\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerUserWidget.h">
       <Filter>Source\ProjectCP\Public\UI</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\Weapon">

@@ -166,6 +166,8 @@
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/Managers/BP_GameManager.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/__ExternalActors__/Levels/Untitled/9/EG/Z1590FL5VHGOH5GUIKBQ6H.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_ReloadPlayer.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/UI/BP_PlayerUserWidget.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/UI/BP_PlayerHud.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/__ExternalActors__/Levels/Untitled/1/0P/5N2Y0BZWWODK1PSAKWEQ68.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_JiumpPlayer.uasset"
 			]

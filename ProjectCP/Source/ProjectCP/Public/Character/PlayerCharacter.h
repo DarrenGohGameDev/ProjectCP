@@ -10,6 +10,7 @@
 class UInputManager;
 class UCameraComponent;
 class USpringArmComponent;
+class APlayerHud;
 
 UCLASS()
 class PROJECTCP_API APlayerCharacter : public ABaseCharacter
@@ -19,6 +20,12 @@ class PROJECTCP_API APlayerCharacter : public ABaseCharacter
 public:
 	// Sets default values for this character's properties
 	APlayerCharacter();
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 protected:
 	// Called when the game starts or when spawned
@@ -33,11 +40,12 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 	USpringArmComponent* playerCameraSpringArm;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(EditAnywhere, Category = "UI")
+	APlayerHud* playerHud;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+private:
+
+	void SetPlayerOverlay();
+
 
 };

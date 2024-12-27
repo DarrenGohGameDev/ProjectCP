@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "UI/PlayerHud.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -23,6 +24,8 @@ APlayerCharacter::APlayerCharacter()
 	playerCamera->SetupAttachment(playerCameraSpringArm);
 
 	GetCharacterMovement()->bOrientRotationToMovement = false;
+
+	playerHud = CreateDefaultSubobject<APlayerHud>(TEXT("PlayerHud"));
 }
 
 // Called when the game starts or when spawned
@@ -31,6 +34,21 @@ void APlayerCharacter::BeginPlay()
 	Super::BeginPlay();
 	
 	inputManager->Init(Cast<APlayerController>(GetController()), this);
+}
+
+void APlayerCharacter::SetPlayerOverlay()
+{
+	APlayerController* PlayerController = Cast<APlayerController>(GetController());
+	if (PlayerController)
+	{
+		APlayerHud* PlayerHUD = Cast<APlayerHud>(PlayerController->GetHUD());
+		if (PlayerHUD)
+		{
+			/*PlayerOverlay = PlayerHUD->GetPlayerOverlay();
+			PlayerOverlay->SetSoulAmount(AttributeComponent->GetCurrentSoul());
+			PlayerOverlay->SetGoldCoinAmount(AttributeComponent->GetCurrentGold());*/
+		}
+	}
 }
 
 // Called every frame

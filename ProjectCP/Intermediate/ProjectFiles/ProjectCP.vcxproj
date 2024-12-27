@@ -338,6 +338,9 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerHud.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerUserWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Weapon\BaseRangeWeapon.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -365,6 +368,7 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\WeaponManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\MyHUD.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerHud.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerUserWidget.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Weapon\BaseRangeWeapon.h"/>
   </ItemGroup>
   <PropertyGroup>
