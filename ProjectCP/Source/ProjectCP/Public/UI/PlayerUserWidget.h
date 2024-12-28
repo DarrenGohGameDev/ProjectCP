@@ -17,11 +17,18 @@ class PROJECTCP_API UPlayerUserWidget : public UUserWidget
 	GENERATED_BODY()
 
 public:
+
+	virtual void NativeConstruct() override;
+
 	void SetMaxAmmoText(int32 amount);
 
 	void SetCurrenAmmoText(int32 amount);
 
+	UFUNCTION()
 	void SetAmmoText(int32 maxAmount, int32 currentAmount);
+
+	UFUNCTION()
+	void ToggleThisWidget(bool toggle);
 
 private:
 	UPROPERTY(meta = (BindWidget))

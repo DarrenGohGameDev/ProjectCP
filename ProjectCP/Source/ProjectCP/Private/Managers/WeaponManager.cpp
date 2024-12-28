@@ -3,6 +3,7 @@
 
 #include "Managers/WeaponManager.h"
 #include "Weapon/BaseRangeWeapon.h"
+#include "Managers/DelegateManager.h"
 
 
 // Sets default values for this component's properties
@@ -30,6 +31,7 @@ void UWeaponManager::UseCurrentWeapon()
 	if (primaryWeapon)
 	{
 		primaryWeapon->Shoot_Implementation();
+		UDelegateManager::Get()->UpdateWeaponAmmoUI(primaryWeapon->GetMaxAmmo_Implementation(), primaryWeapon->GetCurrentAmmo_Implementation());
 	}
 }
 
@@ -38,6 +40,10 @@ void UWeaponManager::EquipToPrimaryWeapon(ABaseRangeWeapon* newWeapon)
 	if (primaryWeapon == nullptr)
 	{
 		primaryWeapon = newWeapon;
+
+		UDelegateManager::Get()->ToggleWeaponAmmoUI(true);
+
+		UDelegateManager::Get()->UpdateWeaponAmmoUI(primaryWeapon->GetMaxAmmo_Implementation(), primaryWeapon->GetCurrentAmmo_Implementation());
 	}
 }
 
@@ -46,5 +52,6 @@ void UWeaponManager::ReloadCurrentWeapon()
 	if (primaryWeapon)
 	{
 		primaryWeapon->Reload_Implementation();
+		UE_LOG(LogTemp, Log, TEXT("Reload"));
 	}
 }

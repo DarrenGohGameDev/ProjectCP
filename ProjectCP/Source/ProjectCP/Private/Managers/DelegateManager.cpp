@@ -7,7 +7,6 @@ UDelegateManager* UDelegateManager::mInstance = nullptr;
 
 UDelegateManager* UDelegateManager::Get()
 {
-	UE_LOG(LogTemp, Log, TEXT("DelegateManager instance Get."));
 	if (!mInstance)
 	{
 		mInstance = NewObject<UDelegateManager>();
@@ -16,4 +15,28 @@ UDelegateManager* UDelegateManager::Get()
 	}
 
 	return mInstance;
+}
+
+void UDelegateManager::UpdateItemOverlap(AActor* item)
+{
+	if (OnItemOverlap.IsBound())
+	{
+		OnItemOverlap.Broadcast(item);
+	}
+}
+
+void UDelegateManager::UpdateWeaponAmmoUI(int32 maxAmount, int32 currentAmount)
+{
+	if (OnSetAmmoText.IsBound())
+	{
+		OnSetAmmoText.Broadcast(maxAmount, currentAmount);
+	}
+}
+
+void UDelegateManager::ToggleWeaponAmmoUI(bool toggle)
+{
+	if (OnEquipWeapon.IsBound())
+	{
+		OnEquipWeapon.Broadcast(toggle);
+	}
 }

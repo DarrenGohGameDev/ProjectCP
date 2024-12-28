@@ -3,6 +3,7 @@
 
 #include "UI/PlayerHud.h"
 #include "UI/PlayerUserWidget.h"
+#include "Managers/DelegateManager.h"
 
 void APlayerHud::BeginPlay()
 {
@@ -16,10 +17,6 @@ void APlayerHud::BeginPlay()
 		{
 			mPlayerOverlay = CreateWidget<UPlayerUserWidget>(Controller, mPlayerUserWidgetClass);
 			mPlayerOverlay->AddToViewport();
-
-			mPlayerOverlay->SetAmmoText(20, 10);
 		}
 	}
-
-
 }

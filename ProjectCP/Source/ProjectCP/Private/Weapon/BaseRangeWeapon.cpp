@@ -2,6 +2,7 @@
 
 
 #include "Weapon/BaseRangeWeapon.h"
+#include "Managers/DelegateManager.h"
 
 // Sets default values
 ABaseRangeWeapon::ABaseRangeWeapon()
@@ -64,6 +65,7 @@ void ABaseRangeWeapon::FinishReloading_Implementation()
 	SetCurrentAmmo_Implementation(maxAmmo);
 	GetWorldTimerManager().ClearTimer(mWeaponReloadCooldown);
 	currentWeaponState = EWeaponState::EWS_Ready;
+	UDelegateManager::Get()->UpdateWeaponAmmoUI(GetMaxAmmo_Implementation(), GetCurrentAmmo_Implementation());
 }
 
 void ABaseRangeWeapon::UseAmmo()
@@ -71,11 +73,7 @@ void ABaseRangeWeapon::UseAmmo()
 	if (currentAmmo > 0)
 	{
 		currentAmmo -= useAmmoPerShot;
-		UE_LOG(LogTemp, Warning, TEXT("using weapon ammo remainng current ammo is %d"), currentAmmo);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("out of weapon ammo remainng current ammo is %d"), currentAmmo);
+		UDelegateManager::Get()->UpdateWeaponAmmoUI(GetMaxAmmo_Implementation(), GetCurrentAmmo_Implementation());
 	}
 }
 

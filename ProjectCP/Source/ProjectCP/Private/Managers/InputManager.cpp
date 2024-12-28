@@ -82,7 +82,7 @@ void UInputManager::SetupInputBinding(APlayerController* playerController)
 
 			if (reloadIA)
 			{
-				EnhancedInputComponent->BindAction(interactIA, ETriggerEvent::Triggered, this, &UInputManager::InputReload);
+				EnhancedInputComponent->BindAction(reloadIA, ETriggerEvent::Triggered, this, &UInputManager::InputReload);
 			}
 		}
 	}

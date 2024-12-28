@@ -42,10 +42,7 @@ void ABaseItem::OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor
 	APlayerCharacter* player = Cast<APlayerCharacter>(OtherActor);
 	if (player)
 	{
-		if (UDelegateManager::Get()->OnItemOverlap.IsBound())
-		{
-			UDelegateManager::Get()->OnItemOverlap.Broadcast(this);
-		}
+		UDelegateManager::Get()->UpdateItemOverlap(this);
 	}
 }
 
@@ -54,10 +51,7 @@ void ABaseItem::OnSphereOverlapEnd(UPrimitiveComponent* OverlappedComponent, AAc
 	APlayerCharacter* player = Cast<APlayerCharacter>(OtherActor);
 	if (player)
 	{
-		if (UDelegateManager::Get()->OnItemOverlap.IsBound())
-		{
-			UDelegateManager::Get()->OnItemOverlap.Broadcast(nullptr);
-		}
+		UDelegateManager::Get()->UpdateItemOverlap(nullptr);
 	}
 }
 
