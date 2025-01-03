@@ -659,7 +659,11 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\basecharacter.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\basecharacter.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\actorcomponent\\character\\hitcomponent.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\interface\\gethitinterface.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\gethitinterface.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\hitcomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

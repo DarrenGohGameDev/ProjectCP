@@ -3,6 +3,8 @@
 
 #include "Weapon/BaseRangeWeapon.h"
 #include "Managers/DelegateManager.h"
+#include "Weapon/Projectile/Bullet.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ABaseRangeWeapon::ABaseRangeWeapon()
@@ -58,6 +60,10 @@ void ABaseRangeWeapon::Shoot_Implementation()
 void ABaseRangeWeapon::Reload_Implementation()
 {
 	WeaponReloadCooldown(reloadSpeed);
+	if (mReloadSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, mReloadSound, GetActorLocation());
+	}
 }
 
 void ABaseRangeWeapon::FinishReloading_Implementation()
@@ -74,6 +80,36 @@ void ABaseRangeWeapon::UseAmmo()
 	{
 		currentAmmo -= useAmmoPerShot;
 		UDelegateManager::Get()->UpdateWeaponAmmoUI(GetMaxAmmo_Implementation(), GetCurrentAmmo_Implementation());
+		Shoot();
+	}
+}
+
+void ABaseRangeWeapon::Shoot()
+{
+	UWorld* world = GetWorld();
+	if (mCurrentBullet && world)
+	{
+		FActorSpawnParameters bulletSpawnParams;
+		bulletSpawnParams.Owner = this;
+		bulletSpawnParams.Instigator = GetInstigator();
+		bulletSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+
+		FVector spawnLocation = GetActorLocation();
+
+		spawnLocation.X += 150.f;
+		
+		world->SpawnActor<ABullet>(
+			mCurrentBullet,
+			spawnLocation,
+			GetActorRotation(),
+			bulletSpawnParams
+		);
+
+		if (mShootSound)
+		{
+			UGameplayStatics::PlaySoundAtLocation(this, mShootSound,GetActorLocation());
+		}
 	}
 }
 

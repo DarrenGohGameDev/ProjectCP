@@ -44,6 +44,12 @@ void UWeaponManager::EquipToPrimaryWeapon(ABaseRangeWeapon* newWeapon)
 		UDelegateManager::Get()->ToggleWeaponAmmoUI(true);
 
 		UDelegateManager::Get()->UpdateWeaponAmmoUI(primaryWeapon->GetMaxAmmo_Implementation(), primaryWeapon->GetCurrentAmmo_Implementation());
+
+		//UE_LOG(LogTemp, Warning, TEXT("location %d"), Get);
+
+		//primaryWeapon->SetActorLocation();
+		//primaryWeapon->SetRootComponent(GetOwner()->GetRootComponent());
+		primaryWeapon->AttachToComponent(GetOwner()->GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
 	}
 }
 

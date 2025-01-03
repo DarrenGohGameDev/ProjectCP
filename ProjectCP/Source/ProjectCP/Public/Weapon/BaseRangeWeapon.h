@@ -8,6 +8,8 @@
 #include "Item/BaseItem.h"
 #include "BaseRangeWeapon.generated.h"
 
+class ABullet;
+
 UCLASS()
 class PROJECTCP_API ABaseRangeWeapon : public ABaseItem, public IRangeWeaponInterface
 {
@@ -34,8 +36,6 @@ public:
 
 	virtual void FinishReloading_Implementation() override;
 
-	
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -61,6 +61,8 @@ private:
 
 	void UseAmmo();
 
+	void Shoot();
+
 	void WeaponCooldown(float time);
 
 	void WeaponReloadCooldown(float time);
@@ -72,4 +74,13 @@ private:
 	FTimerHandle  mWeaponFireRateCooldown;
 
 	FTimerHandle  mWeaponReloadCooldown;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+	TSubclassOf<ABullet> mCurrentBullet;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+	USoundBase* mShootSound;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+	USoundBase* mReloadSound;
 };

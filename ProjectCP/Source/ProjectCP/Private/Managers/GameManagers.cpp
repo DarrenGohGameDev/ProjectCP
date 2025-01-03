@@ -22,7 +22,6 @@ void AGameManagers::BeginPlay()
 		mDelegateManager = NewObject<UDelegateManager>(this);
 		if (mDelegateManager)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Custom UObject created in the world context"));
 			mDelegateManager->Get();
 		}
 	}

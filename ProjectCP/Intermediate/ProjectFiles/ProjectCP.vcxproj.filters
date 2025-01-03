@@ -71,6 +71,12 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\StaminaComponent.cpp">
       <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
     </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\ActorComponent\Character">
+      <UniqueIdentifier>{205E4E34-BBB1-3AD9-949F-6FF62AB7ACFE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Character\HitComponent.cpp">
+      <Filter>Source\ProjectCP\Private\ActorComponent\Character</Filter>
+    </ClCompile>
     <Filter Include="Source\ProjectCP\Private\Character">
       <UniqueIdentifier>{289622B6-BF9E-34C6-8FAE-3571A9D01D20}</UniqueIdentifier>
     </Filter>
@@ -80,9 +86,18 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Character\PlayerCharacter.cpp">
       <Filter>Source\ProjectCP\Private\Character</Filter>
     </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\Character\Enemy">
+      <UniqueIdentifier>{048288F5-0C2D-3C2C-B367-A97942039D6D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Character\Enemy\BaseEnemyCharacter.cpp">
+      <Filter>Source\ProjectCP\Private\Character\Enemy</Filter>
+    </ClCompile>
     <Filter Include="Source\ProjectCP\Private\Interface">
       <UniqueIdentifier>{3D30DDEB-2C98-3E6F-A030-E0FA2A014EC5}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Interface\GetHitInterface.cpp">
+      <Filter>Source\ProjectCP\Private\Interface</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Interface\PickUpInterface.cpp">
       <Filter>Source\ProjectCP\Private\Interface</Filter>
     </ClCompile>
@@ -140,6 +155,12 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Weapon\BaseRangeWeapon.cpp">
       <Filter>Source\ProjectCP\Private\Weapon</Filter>
     </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\Weapon\Projectile">
+      <UniqueIdentifier>{96AA174A-0749-3C5D-BFBA-8267DC68D7A7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Weapon\Projectile\Bullet.cpp">
+      <Filter>Source\ProjectCP\Private\Weapon\Projectile</Filter>
+    </ClCompile>
     <Filter Include="Source\ProjectCP\Public">
       <UniqueIdentifier>{3E4A3BAE-8F61-30B3-9B2C-C43080CA23E1}</UniqueIdentifier>
     </Filter>
@@ -170,6 +191,12 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\StaminaComponent.h">
       <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\ActorComponent\Character">
+      <UniqueIdentifier>{93911FDB-962B-3F8A-999A-66C33B1E6E76}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Character\HitComponent.h">
+      <Filter>Source\ProjectCP\Public\ActorComponent\Character</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectCP\Public\Character">
       <UniqueIdentifier>{E4E65BB6-CE6A-333C-BBD4-FC9190B0D933}</UniqueIdentifier>
     </Filter>
@@ -178,6 +205,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Character\PlayerCharacter.h">
       <Filter>Source\ProjectCP\Public\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\Character\Enemy">
+      <UniqueIdentifier>{609457C6-7D6C-3215-BBD1-191EBC1E25BE}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Character\Enemy\BaseEnemyCharacter.h">
+      <Filter>Source\ProjectCP\Public\Character\Enemy</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\Enums">
       <UniqueIdentifier>{76F002D5-ACA7-3DE9-8A06-8402BF697A37}</UniqueIdentifier>
@@ -191,6 +224,9 @@
     <Filter Include="Source\ProjectCP\Public\Interface">
       <UniqueIdentifier>{9F2A749B-9DAA-31BE-8604-7EC4D4BB7387}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\GetHitInterface.h">
+      <Filter>Source\ProjectCP\Public\Interface</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\PickUpInterface.h">
       <Filter>Source\ProjectCP\Public\Interface</Filter>
     </ClInclude>
@@ -247,6 +283,12 @@
     </Filter>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Weapon\BaseRangeWeapon.h">
       <Filter>Source\ProjectCP\Public\Weapon</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\Weapon\Projectile">
+      <UniqueIdentifier>{C80C0E7F-F8E5-36E6-A94D-C2E54BD5A3DD}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Weapon\Projectile\Bullet.h">
+      <Filter>Source\ProjectCP\Public\Weapon\Projectile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

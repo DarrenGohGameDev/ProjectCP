@@ -6,10 +6,10 @@
 #include "GameFramework/Character.h"
 #include "BaseCharacter.generated.h"
 
-
+class UHitComponent;
 
 UCLASS()
-class PROJECTCP_API ABaseCharacter : public ACharacter
+class PROJECTCP_API ABaseCharacter : public ACharacter 
 {
 	GENERATED_BODY()
 
@@ -21,12 +21,11 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UHitComponent* hitComponent;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 };
