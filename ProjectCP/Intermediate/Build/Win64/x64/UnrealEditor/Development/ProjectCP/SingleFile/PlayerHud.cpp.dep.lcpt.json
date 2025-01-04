@@ -921,7 +921,9 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\misc\\outputdeviceerror.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\misc\\worldcompositionutility.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\customversion.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\delegatemanager.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\delegatemanager.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\ui\\hpbarwidget.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\hpbarwidget.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

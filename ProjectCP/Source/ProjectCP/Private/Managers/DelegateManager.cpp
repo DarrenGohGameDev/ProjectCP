@@ -40,3 +40,19 @@ void UDelegateManager::ToggleWeaponAmmoUI(bool toggle)
 		OnEquipWeapon.Broadcast(toggle);
 	}
 }
+
+void UDelegateManager::HitActor(int32 damage, AActor* hitActor)
+{
+	if (OnHitActor.IsBound())
+	{
+		OnHitActor.Broadcast(damage,hitActor);
+	}
+}
+
+void UDelegateManager::UpdateHpBarPercent(float minusPercent, AActor* hpBarOwner)
+{
+	if (OnHpBarChange.IsBound())
+	{
+		OnHpBarChange.Broadcast(minusPercent, hpBarOwner);
+	}
+}

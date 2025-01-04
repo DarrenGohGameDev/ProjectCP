@@ -9,10 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef PROJECTCP_HitComponent_generated_h
 #error "HitComponent.generated.h already included, missing '#pragma once' in HitComponent.h"
 #endif
 #define PROJECTCP_HitComponent_generated_h
+
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetHit_Implementation);
+
 
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_15_INCLASS_NO_PURE_DECLS \
 private: \
@@ -40,6 +45,7 @@ public: \
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_15_INCLASS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_15_ENHANCED_CONSTRUCTORS \
 private: \

@@ -35,7 +35,7 @@ public:
 	FORCEINLINE float GetCurrentHpPercent() { return CurrentHpPercent(); }
 
 	// Taking Damage
-	FORCEINLINE void TakeDamage(float Amount);
+	void TakeDamage(float Amount ,float& currentHpPercent );
 
 	// Main Stat Setter
 	FORCEINLINE void SetCurrentHp(float Amount) { CurrentHp = Amount; }

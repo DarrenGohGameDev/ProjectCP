@@ -5,7 +5,8 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "CollisionQueryParams.h"
 #include "Components/SphereComponent.h"
-#include "Interface/GetHitInterface.h"
+#include "ActorComponent/Character/HitComponent.h"
+#include "Managers/DelegateManager.h"
 
 // Sets default values
 ABullet::ABullet()
@@ -18,6 +19,7 @@ ABullet::ABullet()
 
 	BulletMeshComponent->SetCollisionObjectType(ECollisionChannel::ECC_EngineTraceChannel1);
 	BulletMeshComponent->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
+	BulletMeshComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Overlap);
 	BulletMeshComponent->SetCollisionResponseToChannel(ECollisionChannel::ECC_EngineTraceChannel1, ECollisionResponse::ECR_Ignore);
 
 	BulletMeshComponent->SetSimulatePhysics(false);
@@ -40,6 +42,8 @@ void ABullet::BeginPlay()
 {
 	Super::BeginPlay();
 
+	mSphere->OnComponentBeginOverlap.AddDynamic(this, &ABullet::OnSphereOverlap);
+
 	if (projectileMovementComponent)
 	{
 		projectileMovementComponent->Velocity = GetActorForwardVector() * projectileMovementComponent->InitialSpeed;
@@ -52,13 +56,23 @@ void ABullet::Tick(float DeltaTime)
 
 }
 
+void ABullet::ToggleBullet(bool toggle)
+{
+	SetActorTickEnabled(toggle);
+
+	SetActorEnableCollision(toggle);
+
+	SetActorHiddenInGame(!toggle);
+}
+
 
 void ABullet::OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	IGetHitInterface* actorHitInterface = Cast<IGetHitInterface>(OtherActor);
+	UHitComponent * actorHitInterface = OtherActor->FindComponentByClass<UHitComponent>();
 
 	if (actorHitInterface)
 	{
-		actorHitInterface->GetHit(damage,this);
+		UDelegateManager::Get()->HitActor(damage, OtherActor);
+		ToggleBullet(false);
 	}
 }

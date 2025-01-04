@@ -14,7 +14,9 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 PROJECTCP_API UClass* Z_Construct_UClass_UDelegateManager();
 PROJECTCP_API UClass* Z_Construct_UClass_UDelegateManager_NoRegister();
+PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature();
 PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnEquipWeapon__DelegateSignature();
+PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature();
 PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnItemOverlap__DelegateSignature();
 PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_SetAmmoText__DelegateSignature();
 UPackage* Z_Construct_UPackage__Script_ProjectCP();
@@ -163,6 +165,106 @@ void FOnEquipWeapon_DelegateWrapper(const FMulticastScriptDelegate& OnEquipWeapo
 }
 // End Delegate FOnEquipWeapon
 
+// Begin Delegate FOnHitActor
+struct Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics
+{
+	struct _Script_ProjectCP_eventOnHitActor_Parms
+	{
+		int32 damage;
+		AActor* hitActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_damage;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_hitActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::NewProp_damage = { "damage", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProjectCP_eventOnHitActor_Parms, damage), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::NewProp_hitActor = { "hitActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProjectCP_eventOnHitActor_Parms, hitActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::NewProp_damage,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::NewProp_hitActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_ProjectCP, nullptr, "OnHitActor__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::_Script_ProjectCP_eventOnHitActor_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::_Script_ProjectCP_eventOnHitActor_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FOnHitActor_DelegateWrapper(const FMulticastScriptDelegate& OnHitActor, int32 damage, AActor* hitActor)
+{
+	struct _Script_ProjectCP_eventOnHitActor_Parms
+	{
+		int32 damage;
+		AActor* hitActor;
+	};
+	_Script_ProjectCP_eventOnHitActor_Parms Parms;
+	Parms.damage=damage;
+	Parms.hitActor=hitActor;
+	OnHitActor.ProcessMulticastDelegate<UObject>(&Parms);
+}
+// End Delegate FOnHitActor
+
+// Begin Delegate FOnChangeHpBarPercent
+struct Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics
+{
+	struct _Script_ProjectCP_eventOnChangeHpBarPercent_Parms
+	{
+		float remainingPercent;
+		AActor* hpBarOwner;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_remainingPercent;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_hpBarOwner;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::NewProp_remainingPercent = { "remainingPercent", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProjectCP_eventOnChangeHpBarPercent_Parms, remainingPercent), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::NewProp_hpBarOwner = { "hpBarOwner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_ProjectCP_eventOnChangeHpBarPercent_Parms, hpBarOwner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::NewProp_remainingPercent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::NewProp_hpBarOwner,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_ProjectCP, nullptr, "OnChangeHpBarPercent__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::_Script_ProjectCP_eventOnChangeHpBarPercent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::_Script_ProjectCP_eventOnChangeHpBarPercent_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FOnChangeHpBarPercent_DelegateWrapper(const FMulticastScriptDelegate& OnChangeHpBarPercent, float remainingPercent, AActor* hpBarOwner)
+{
+	struct _Script_ProjectCP_eventOnChangeHpBarPercent_Parms
+	{
+		float remainingPercent;
+		AActor* hpBarOwner;
+	};
+	_Script_ProjectCP_eventOnChangeHpBarPercent_Parms Parms;
+	Parms.remainingPercent=remainingPercent;
+	Parms.hpBarOwner=hpBarOwner;
+	OnChangeHpBarPercent.ProcessMulticastDelegate<UObject>(&Parms);
+}
+// End Delegate FOnChangeHpBarPercent
+
 // Begin Class UDelegateManager
 void UDelegateManager::StaticRegisterNativesUDelegateManager()
 {
@@ -191,10 +293,20 @@ struct Z_Construct_UClass_UDelegateManager_Statics
 		{ "Category", "Events" },
 		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnHitActor_MetaData[] = {
+		{ "Category", "Events" },
+		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnHpBarChange_MetaData[] = {
+		{ "Category", "Events" },
+		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnItemOverlap;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnSetAmmoText;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnEquipWeapon;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnHitActor;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnHpBarChange;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -205,10 +317,14 @@ struct Z_Construct_UClass_UDelegateManager_Statics
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnItemOverlap = { "OnItemOverlap", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnItemOverlap), Z_Construct_UDelegateFunction_ProjectCP_OnItemOverlap__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnItemOverlap_MetaData), NewProp_OnItemOverlap_MetaData) }; // 112737219
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnSetAmmoText = { "OnSetAmmoText", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnSetAmmoText), Z_Construct_UDelegateFunction_ProjectCP_SetAmmoText__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnSetAmmoText_MetaData), NewProp_OnSetAmmoText_MetaData) }; // 2920830151
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnEquipWeapon = { "OnEquipWeapon", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnEquipWeapon), Z_Construct_UDelegateFunction_ProjectCP_OnEquipWeapon__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnEquipWeapon_MetaData), NewProp_OnEquipWeapon_MetaData) }; // 950719465
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnHitActor = { "OnHitActor", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnHitActor), Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnHitActor_MetaData), NewProp_OnHitActor_MetaData) }; // 14215175
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnHpBarChange = { "OnHpBarChange", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnHpBarChange), Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnHpBarChange_MetaData), NewProp_OnHpBarChange_MetaData) }; // 2137172729
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDelegateManager_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnItemOverlap,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnSetAmmoText,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnEquipWeapon,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnHitActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnHpBarChange,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UDelegateManager_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UDelegateManager_Statics::DependentSingletons[])() = {
@@ -252,10 +368,10 @@ UDelegateManager::~UDelegateManager() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDelegateManager, UDelegateManager::StaticClass, TEXT("UDelegateManager"), &Z_Registration_Info_UClass_UDelegateManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDelegateManager), 758103458U) },
+		{ Z_Construct_UClass_UDelegateManager, UDelegateManager::StaticClass, TEXT("UDelegateManager"), &Z_Registration_Info_UClass_UDelegateManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDelegateManager), 1792315464U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_2164493629(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_3564542619(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

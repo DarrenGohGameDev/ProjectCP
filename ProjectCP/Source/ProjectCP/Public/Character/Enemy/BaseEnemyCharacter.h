@@ -7,6 +7,8 @@
 #include "Character/BaseCharacter.h"
 #include "BaseEnemyCharacter.generated.h"
 
+class UEnemyHpBarWidget;
+
 UCLASS()
 class PROJECTCP_API ABaseEnemyCharacter : public ABaseCharacter
 {
@@ -25,5 +27,9 @@ protected:
 
 private:	
 	
+	void ToggleHealthBar(bool toggle);
 
+	void ToggleHealthBar(bool toggle, float hpPercent);
+
+	UEnemyHpBarWidget* mHpBarWidget;
 };

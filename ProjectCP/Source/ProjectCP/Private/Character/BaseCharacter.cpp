@@ -12,6 +12,8 @@ ABaseCharacter::ABaseCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 	
 	hitComponent = CreateDefaultSubobject<UHitComponent>(TEXT("HitComponent"));
+
+	GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_EngineTraceChannel1, ECollisionResponse::ECR_Overlap);
 }
 
 // Called when the game starts or when spawned

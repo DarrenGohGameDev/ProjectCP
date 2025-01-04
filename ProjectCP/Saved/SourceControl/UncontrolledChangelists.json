@@ -169,6 +169,11 @@
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/UI/BP_PlayerUserWidget.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/UI/BP_PlayerHud.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/Weapon/Bullet/BP_BaseBullet.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/Enemy/BP_BaseEnemy.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/UI/UIComponent/BP_EnemyHpBarWidget.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/UI/Hud/BP_PlayerHud.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/UI/Widget/BP_PlayerUserWidget.uasset",
+				"H:/UE5Project/ProjectCP/ProjectCP/Content/Blueprint/UI/Widget/BP_HpBarWidget.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/__ExternalActors__/Levels/Untitled/1/0P/5N2Y0BZWWODK1PSAKWEQ68.uasset",
 				"H:/UE5Project/ProjectCP/ProjectCP/Content/Input/IA_JiumpPlayer.uasset"
 			]

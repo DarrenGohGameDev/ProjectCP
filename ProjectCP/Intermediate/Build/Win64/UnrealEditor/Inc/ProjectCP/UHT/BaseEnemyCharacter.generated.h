@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTCP_BaseEnemyCharacter_generated_h
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseEnemyCharacter(); \
 	friend struct Z_Construct_UClass_ABaseEnemyCharacter_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseEnemyCharacter)
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABaseEnemyCharacter(ABaseEnemyCharacter&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ABaseEnemyCharacter();
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_10_PROLOG
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_13_GENERATED_BODY \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_12_PROLOG
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_13_INCLASS_NO_PURE_DECLS \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_13_ENHANCED_CONSTRUCTORS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_15_INCLASS_NO_PURE_DECLS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_Enemy_BaseEnemyCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

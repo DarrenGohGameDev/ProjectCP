@@ -14,6 +14,9 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FSetAmmoText, int32, maxAmount,int3
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnEquipWeapon, bool, toggle);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnHitActor, int32, damage, AActor*, hitActor);
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangeHpBarPercent, float, remainingPercent, AActor*, hpBarOwner);
 
 UCLASS()
 class PROJECTCP_API UDelegateManager : public UObject
@@ -32,11 +35,21 @@ public :
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnEquipWeapon OnEquipWeapon;
 
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnHitActor OnHitActor;
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnChangeHpBarPercent OnHpBarChange;
+
 	void UpdateItemOverlap(AActor* item);
 
 	void UpdateWeaponAmmoUI(int32 maxAmount, int32 currentAmount);
 
 	void ToggleWeaponAmmoUI(bool toggle);
+
+	void HitActor(int32 damage, AActor* hitActor);
+
+	void UpdateHpBarPercent(float remainingPercent, AActor* hpBarOwner);
 
 private : 
 	static UDelegateManager * mInstance;

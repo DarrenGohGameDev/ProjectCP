@@ -140,6 +140,12 @@
     <Filter Include="Source\ProjectCP\Private\UI">
       <UniqueIdentifier>{996B5DDC-B19B-3808-897A-B41E8CE8FB50}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\EnemyHpBarWidget.cpp">
+      <Filter>Source\ProjectCP\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\HpBarWidget.cpp">
+      <Filter>Source\ProjectCP\Private\UI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\UI\MyHUD.cpp">
       <Filter>Source\ProjectCP\Private\UI</Filter>
     </ClCompile>
@@ -269,6 +275,12 @@
     <Filter Include="Source\ProjectCP\Public\UI">
       <UniqueIdentifier>{FE7F660A-8ECB-39E2-B750-69F20BCACB45}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\EnemyHpBarWidget.h">
+      <Filter>Source\ProjectCP\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\HpBarWidget.h">
+      <Filter>Source\ProjectCP\Public\UI</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\MyHUD.h">
       <Filter>Source\ProjectCP\Public\UI</Filter>
     </ClInclude>

@@ -23,9 +23,10 @@ void UHealthComponent::BeginPlay()
 	
 }
 
-void UHealthComponent::TakeDamage(float Amount)
+void UHealthComponent::TakeDamage(float Amount, float& currentHpPercent)
 {
 	CurrentHp = FMath::Clamp(CurrentHp - Amount, 0.f, MaxHp);
+	currentHpPercent = CurrentHpPercent();
 }
 
 void UHealthComponent::SetStats()

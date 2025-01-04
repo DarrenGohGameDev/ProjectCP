@@ -50,7 +50,7 @@ int32 ABaseRangeWeapon::GetCurrentAmmo_Implementation()
 
 void ABaseRangeWeapon::Shoot_Implementation()
 {
-	if (currentWeaponState != EWeaponState::EWS_Ready && currentAmmo <= 0) return;
+	if (currentWeaponState != EWeaponState::EWS_Ready || currentAmmo <= 0) return;
 	
 	//currentWeaponState = EWeaponState::EWS_Shooting;
 	UE_LOG(LogTemp, Warning, TEXT("shooting weapon"));

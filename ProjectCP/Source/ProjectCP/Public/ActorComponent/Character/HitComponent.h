@@ -21,13 +21,20 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UFUNCTION()
+	virtual void GetHit_Implementation(int32  damage, AActor* hitActor) override;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
 private:	
-		
-	virtual void GetHit_Implementation(int32  damage, AActor* Hitter) override;
 
+	UPROPERTY(VisibleAnywhere)
 	UHealthComponent* mHealthComponent;
+
+	UPROPERTY(EditAnywhere)
+	USoundBase* mHitSound;
+
+	AActor* mOwner;
 };

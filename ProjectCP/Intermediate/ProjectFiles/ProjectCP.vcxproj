@@ -341,6 +341,12 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\WeaponManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\EnemyHpBarWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\HpBarWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\UI\MyHUD.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -381,6 +387,8 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InventoryManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\StatsManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\WeaponManager.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\EnemyHpBarWidget.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\HpBarWidget.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\MyHUD.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerHud.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerUserWidget.h"/>

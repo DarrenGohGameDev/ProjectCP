@@ -4,6 +4,7 @@
 #include "UI/PlayerHud.h"
 #include "UI/PlayerUserWidget.h"
 #include "Managers/DelegateManager.h"
+#include "UI/HpBarWidget.h"
 
 void APlayerHud::BeginPlay()
 {
@@ -13,10 +14,13 @@ void APlayerHud::BeginPlay()
 	if (World)
 	{
 		APlayerController* Controller = World->GetFirstPlayerController();
-		if (Controller && mPlayerUserWidgetClass)
+		if (Controller && mPlayerUserWidgetClass && mPlayerHpBarWidgetClass)
 		{
 			mPlayerOverlay = CreateWidget<UPlayerUserWidget>(Controller, mPlayerUserWidgetClass);
 			mPlayerOverlay->AddToViewport();
+
+			mPlayerHpBarUI = CreateWidget<UHpBarWidget>(Controller, mPlayerHpBarWidgetClass);
+			mPlayerHpBarUI->AddToViewport();
 		}
 	}
 }

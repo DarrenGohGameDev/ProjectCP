@@ -3,6 +3,8 @@
 
 #include "ActorComponent/Character/HitComponent.h"
 #include "ActorComponent/Attribute/HealthComponent.h"
+#include "Managers/DelegateManager.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 UHitComponent::UHitComponent()
@@ -21,7 +23,8 @@ void UHitComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
+	UDelegateManager::Get()->OnHitActor.AddDynamic(this,&UHitComponent::GetHit_Implementation);
+	mOwner = GetOwner();
 }
 
 // Called every frame
@@ -32,8 +35,17 @@ void UHitComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	// ...
 }
 
-void UHitComponent::GetHit_Implementation(int32 damage, AActor* Hitter)
+void UHitComponent::GetHit_Implementation(int32 damage, AActor* hitActor)
 {
-	float bulletDamage = (float)damage;
-	mHealthComponent->TakeDamage(bulletDamage);
+	if (hitActor == mOwner)
+	{
+		float bulletDamage = (float)damage;
+		float newHpPercent;
+		mHealthComponent->TakeDamage(bulletDamage, newHpPercent);
+		UDelegateManager::Get()->UpdateHpBarPercent(newHpPercent, mOwner);
+		if (mHitSound)
+		{
+			UGameplayStatics::PlaySoundAtLocation(this, mHitSound, mOwner->GetActorLocation());
+		}
+	}
 }
