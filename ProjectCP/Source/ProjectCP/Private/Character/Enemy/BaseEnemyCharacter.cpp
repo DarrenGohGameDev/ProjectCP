@@ -2,6 +2,7 @@
 
 
 #include "Character/Enemy/BaseEnemyCharacter.h"
+#include "ActorComponent/Character/HitComponent.h"
 #include "UI/EnemyHpBarWidget.h"
 
 // Sets default values
@@ -18,7 +19,9 @@ ABaseEnemyCharacter::ABaseEnemyCharacter()
 void ABaseEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	mHpBarWidget->SetHpBarWidget();
+	hitComponent->SetPlayerBaseHp();
 }
 
 // Called every frame

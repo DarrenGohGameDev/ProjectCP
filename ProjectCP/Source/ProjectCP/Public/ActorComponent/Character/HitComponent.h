@@ -24,6 +24,8 @@ public:
 	UFUNCTION()
 	virtual void GetHit_Implementation(int32  damage, AActor* hitActor) override;
 
+	void SetPlayerBaseHp();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

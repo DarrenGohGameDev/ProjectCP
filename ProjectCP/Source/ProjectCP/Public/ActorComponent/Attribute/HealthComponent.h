@@ -23,7 +23,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "HP Attributes")
 	float MaxHp = 100.f;
 
-	UPROPERTY(VisibleAnywhere, Category = "HP Attributes")
+	UPROPERTY(EditAnywhere, Category = "HP Attributes")
 	float CurrentHp;
 
 // Getters and Setter for Stats

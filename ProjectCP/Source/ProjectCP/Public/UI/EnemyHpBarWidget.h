@@ -21,6 +21,6 @@ public :
 	void SetHpBarWidget();
 	
 private:
-	UPROPERTY()
-	UHpBarWidget* HealthBarWidget;
+	UPROPERTY(VisibleAnywhere)
+	UHpBarWidget* mHealthBarWidget;
 };

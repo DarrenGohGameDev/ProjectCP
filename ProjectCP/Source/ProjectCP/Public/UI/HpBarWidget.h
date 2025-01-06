@@ -19,8 +19,19 @@ public:
 
 	virtual void NativeConstruct() override;
 
+	void Init(AActor* owner);
+
+	UFUNCTION()
 	void SetHpBarPercent(float remainingPercent, AActor* hpBarOwner);
 
 	UPROPERTY(meta = (BindWidget))
 	UProgressBar* hpBar;
+
+private:
+
+	void ToggleHpBar(bool toggle);
+
+	AActor* mOwner;
+
+	AActor* mPlayer;
 };

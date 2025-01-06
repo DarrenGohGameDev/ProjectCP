@@ -20,6 +20,7 @@ void APlayerHud::BeginPlay()
 			mPlayerOverlay->AddToViewport();
 
 			mPlayerHpBarUI = CreateWidget<UHpBarWidget>(Controller, mPlayerHpBarWidgetClass);
+			mPlayerHpBarUI->Init(Controller->GetPawn());
 			mPlayerHpBarUI->AddToViewport();
 		}
 	}

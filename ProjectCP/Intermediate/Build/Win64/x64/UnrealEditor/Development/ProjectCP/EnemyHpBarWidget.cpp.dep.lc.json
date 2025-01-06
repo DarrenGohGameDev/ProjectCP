@@ -39,11 +39,7 @@
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetcomponent.generated.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\enemyhpbarwidget.generated.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\ui\\hpbarwidget.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\hpbarwidget.generated.h",
-            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\umg\\public\\components\\progressbar.h",
-            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\slate\\public\\widgets\\notifications\\sprogressbar.h",
-            "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\slate\\uht\\sprogressbar.generated.h",
-            "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\progressbar.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\hpbarwidget.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

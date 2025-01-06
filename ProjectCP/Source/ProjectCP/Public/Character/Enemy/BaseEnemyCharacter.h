@@ -24,6 +24,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
 
 private:	
 	
@@ -31,5 +32,6 @@ private:
 
 	void ToggleHealthBar(bool toggle, float hpPercent);
 
+	UPROPERTY(VisibleAnywhere)
 	UEnemyHpBarWidget* mHpBarWidget;
 };

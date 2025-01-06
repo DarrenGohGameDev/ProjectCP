@@ -25,6 +25,8 @@ void UHitComponent::BeginPlay()
 	// ...
 	UDelegateManager::Get()->OnHitActor.AddDynamic(this,&UHitComponent::GetHit_Implementation);
 	mOwner = GetOwner();
+
+	SetPlayerBaseHp();
 }
 
 // Called every frame
@@ -48,4 +50,9 @@ void UHitComponent::GetHit_Implementation(int32 damage, AActor* hitActor)
 			UGameplayStatics::PlaySoundAtLocation(this, mHitSound, mOwner->GetActorLocation());
 		}
 	}
+}
+
+void UHitComponent::SetPlayerBaseHp()
+{
+	UDelegateManager::Get()->UpdateHpBarPercent(mHealthComponent->GetCurrentHpPercent(), mOwner);
 }

@@ -7,14 +7,14 @@
 void UEnemyHpBarWidget::BeginPlay()
 {
 	Super::BeginPlay();
-
-
 }
 
 void UEnemyHpBarWidget::SetHpBarWidget()
 {
-	if (HealthBarWidget == nullptr)
+	if (mHealthBarWidget == nullptr)
 	{
-		HealthBarWidget = Cast<UHpBarWidget>(GetUserWidgetObject());
+		mHealthBarWidget = Cast<UHpBarWidget>(GetUserWidgetObject());
 	}
+
+	mHealthBarWidget->Init(GetOwner());
 }
