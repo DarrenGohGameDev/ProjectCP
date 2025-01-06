@@ -20,8 +20,38 @@ ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 PROJECTCP_API UClass* Z_Construct_UClass_ABullet();
 PROJECTCP_API UClass* Z_Construct_UClass_ABullet_NoRegister();
+PROJECTCP_API UEnum* Z_Construct_UEnum_ProjectCP_EBulletState();
 UPackage* Z_Construct_UPackage__Script_ProjectCP();
 // End Cross Module References
+
+// Begin Class ABullet Function BulletExpire
+struct Z_Construct_UFunction_ABullet_BulletExpire_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Weapon/Projectile/Bullet.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABullet_BulletExpire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABullet, nullptr, "BulletExpire", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABullet_BulletExpire_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABullet_BulletExpire_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ABullet_BulletExpire()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABullet_BulletExpire_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABullet::execBulletExpire)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BulletExpire();
+	P_NATIVE_END;
+}
+// End Class ABullet Function BulletExpire
 
 // Begin Class ABullet Function OnSphereOverlap
 struct Z_Construct_UFunction_ABullet_OnSphereOverlap_Statics
@@ -109,6 +139,7 @@ void ABullet::StaticRegisterNativesABullet()
 {
 	UClass* Class = ABullet::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "BulletExpire", &ABullet::execBulletExpire },
 		{ "OnSphereOverlap", &ABullet::execOnSphereOverlap },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -138,6 +169,10 @@ struct Z_Construct_UClass_ABullet_Statics
 		{ "Category", "Stats" },
 		{ "ModuleRelativePath", "Public/Weapon/Projectile/Bullet.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bulletAliveDuration_MetaData[] = {
+		{ "Category", "Stats" },
+		{ "ModuleRelativePath", "Public/Weapon/Projectile/Bullet.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_projectileMovementComponent_MetaData[] = {
 		{ "Category", "Stats" },
 		{ "EditInline", "true" },
@@ -148,15 +183,23 @@ struct Z_Construct_UClass_ABullet_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Weapon/Projectile/Bullet.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_currentBulletState_MetaData[] = {
+		{ "Category", "Bullet State" },
+		{ "ModuleRelativePath", "Public/Weapon/Projectile/Bullet.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_mSphere;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_damage;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_projectileSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_bulletAliveDuration;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_projectileMovementComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BulletMeshComponent;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_currentBulletState_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_currentBulletState;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABullet_BulletExpire, "BulletExpire" }, // 3335597923
 		{ &Z_Construct_UFunction_ABullet_OnSphereOverlap, "OnSphereOverlap" }, // 4157268330
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -168,14 +211,20 @@ struct Z_Construct_UClass_ABullet_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_mSphere = { "mSphere", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABullet, mSphere), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_mSphere_MetaData), NewProp_mSphere_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_damage = { "damage", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABullet, damage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_damage_MetaData), NewProp_damage_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_projectileSpeed = { "projectileSpeed", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABullet, projectileSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_projectileSpeed_MetaData), NewProp_projectileSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_bulletAliveDuration = { "bulletAliveDuration", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABullet, bulletAliveDuration), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bulletAliveDuration_MetaData), NewProp_bulletAliveDuration_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_projectileMovementComponent = { "projectileMovementComponent", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABullet, projectileMovementComponent), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_projectileMovementComponent_MetaData), NewProp_projectileMovementComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_BulletMeshComponent = { "BulletMeshComponent", nullptr, (EPropertyFlags)0x0020080000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABullet, BulletMeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BulletMeshComponent_MetaData), NewProp_BulletMeshComponent_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_currentBulletState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_currentBulletState = { "currentBulletState", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABullet, currentBulletState), Z_Construct_UEnum_ProjectCP_EBulletState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_currentBulletState_MetaData), NewProp_currentBulletState_MetaData) }; // 3472759578
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABullet_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABullet_Statics::NewProp_mSphere,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABullet_Statics::NewProp_damage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABullet_Statics::NewProp_projectileSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABullet_Statics::NewProp_bulletAliveDuration,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABullet_Statics::NewProp_projectileMovementComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABullet_Statics::NewProp_BulletMeshComponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABullet_Statics::NewProp_currentBulletState_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABullet_Statics::NewProp_currentBulletState,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABullet_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABullet_Statics::DependentSingletons[])() = {
@@ -218,10 +267,10 @@ ABullet::~ABullet() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABullet, ABullet::StaticClass, TEXT("ABullet"), &Z_Registration_Info_UClass_ABullet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABullet), 2248351253U) },
+		{ Z_Construct_UClass_ABullet, ABullet::StaticClass, TEXT("ABullet"), &Z_Registration_Info_UClass_ABullet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABullet), 1750728306U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_3505321225(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_2115375275(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

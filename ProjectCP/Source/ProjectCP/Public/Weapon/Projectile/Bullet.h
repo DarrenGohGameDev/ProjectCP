@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Enums/BulletState.h"
 #include "Bullet.generated.h"
 
 class UProjectileMovementComponent;
@@ -24,6 +25,10 @@ public:
 
 	void ToggleBullet(bool toggle);
 
+	void NewBullet(bool toggle);
+
+	FORCEINLINE EBulletState GetBulletState() { return currentBulletState; }
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -40,13 +45,21 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Stats")
 	int32 projectileSpeed;
 
+	UPROPERTY(EditAnywhere, Category = "Stats")
+	float bulletAliveDuration = 10.f;
+
 	UPROPERTY(VisibleAnywhere, Category = "Stats")
 	UProjectileMovementComponent* projectileMovementComponent;
 
 	UPROPERTY(EditAnywhere ,Category = "Bullet Skin")
 	UStaticMeshComponent* BulletMeshComponent;
 
-private:	
-	
+	UPROPERTY(VisibleAnywhere, Category = "Bullet State")
+	EBulletState  currentBulletState = EBulletState::EBS_InUse;
 
+private:	
+	UFUNCTION()
+	void BulletExpire();
+
+	FTimerHandle mBulletLiveTime;
 };

@@ -131,6 +131,9 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InventoryManager.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\ObjectPoolingManager.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\StatsManager.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
@@ -266,6 +269,9 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InventoryManager.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\ObjectPoolingManager.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\StatsManager.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
@@ -301,6 +307,11 @@
     </Filter>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Weapon\Projectile\Bullet.h">
       <Filter>Source\ProjectCP\Public\Weapon\Projectile</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\BulletState.h">
+      <Filter>Source\ProjectCP\Public\Enums</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

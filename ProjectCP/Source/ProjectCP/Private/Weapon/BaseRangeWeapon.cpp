@@ -5,6 +5,7 @@
 #include "Managers/DelegateManager.h"
 #include "Weapon/Projectile/Bullet.h"
 #include "Kismet/GameplayStatics.h"
+#include "Managers/ObjectPoolingManager.h"
 
 // Sets default values
 ABaseRangeWeapon::ABaseRangeWeapon()
@@ -89,7 +90,7 @@ void ABaseRangeWeapon::Shoot()
 	UWorld* world = GetWorld();
 	if (mCurrentBullet && world)
 	{
-		FActorSpawnParameters bulletSpawnParams;
+		/*FActorSpawnParameters bulletSpawnParams;
 		bulletSpawnParams.Owner = this;
 		bulletSpawnParams.Instigator = GetInstigator();
 		bulletSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
@@ -104,7 +105,12 @@ void ABaseRangeWeapon::Shoot()
 			spawnLocation,
 			GetActorRotation(),
 			bulletSpawnParams
-		);
+		);*/
+
+		FVector spawnLocation = GetActorLocation();
+		spawnLocation.X += 150.f;
+
+		UObjectPoolingManager::Get()->GetBullet(this, spawnLocation, GetActorRotation());
 
 		if (mShootSound)
 		{

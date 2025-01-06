@@ -17,11 +17,12 @@ struct FHitResult;
 #endif
 #define PROJECTCP_Bullet_generated_h
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execBulletExpire); \
 	DECLARE_FUNCTION(execOnSphereOverlap);
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABullet(); \
 	friend struct Z_Construct_UClass_ABullet_Statics; \
@@ -30,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(ABullet)
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABullet(ABullet&&); \
@@ -42,13 +43,13 @@ public: \
 	NO_API virtual ~ABullet();
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_13_PROLOG
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_16_GENERATED_BODY \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_14_PROLOG
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_16_INCLASS_NO_PURE_DECLS \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_16_ENHANCED_CONSTRUCTORS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_17_INCLASS_NO_PURE_DECLS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_Projectile_Bullet_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -671,6 +671,7 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\iinputinterface.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\delegatemanager.generated.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\weapon\\projectile\\bullet.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\bulletstate.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\bullet.generated.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\public\\collisionqueryparams.h",
@@ -767,7 +768,9 @@
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\particles\\worldpscpool.h",
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\worldpscpool.generated.h",
-            "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h"
+            "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\objectpoolingmanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\objectpoolingmanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

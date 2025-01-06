@@ -34,10 +34,10 @@ void UHpBarWidget::SetHpBarPercent(float remainingPercent, AActor* hpBarOwner)
 		UE_LOG(LogTemp, Error, TEXT("hpBarOwner is NULL!"));
 	}
 
-	if (hpBarOwner != mPlayer)
+	/*if (hpBarOwner != mPlayer)
 	{
 		ToggleHpBar(true);
-	}
+	}*/
 
 	
 	if (hpBar && hpBarOwner == mOwner)

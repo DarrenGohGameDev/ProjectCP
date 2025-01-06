@@ -7,6 +7,8 @@
 #include "GameManagers.generated.h"
 
 class UDelegateManager;
+class UObjectPoolingManager;
+class ABullet;
 
 UCLASS()
 class PROJECTCP_API AGameManagers : public AActor
@@ -17,13 +19,18 @@ public:
 	// Sets default values for this actor's properties
 	AGameManagers();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	UDelegateManager* mDelegateManager;
+
+	UObjectPoolingManager* mObjectPoolingManager;
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+private:
+	UPROPERTY(EditAnywhere, Category = "Bullet")
+	TSubclassOf<ABullet> mSpawningBullet;
 };

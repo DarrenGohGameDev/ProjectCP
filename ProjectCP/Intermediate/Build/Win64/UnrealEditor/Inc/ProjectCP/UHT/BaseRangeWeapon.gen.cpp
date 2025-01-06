@@ -21,9 +21,86 @@ PROJECTCP_API UEnum* Z_Construct_UEnum_ProjectCP_EWeaponState();
 UPackage* Z_Construct_UPackage__Script_ProjectCP();
 // End Cross Module References
 
+// Begin Class ABaseRangeWeapon Function WeaponCooldown
+struct Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics
+{
+	struct BaseRangeWeapon_eventWeaponCooldown_Parms
+	{
+		float time;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Weapon/BaseRangeWeapon.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_time;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::NewProp_time = { "time", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BaseRangeWeapon_eventWeaponCooldown_Parms, time), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::NewProp_time,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseRangeWeapon, nullptr, "WeaponCooldown", nullptr, nullptr, Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::BaseRangeWeapon_eventWeaponCooldown_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::BaseRangeWeapon_eventWeaponCooldown_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABaseRangeWeapon::execWeaponCooldown)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_time);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->WeaponCooldown(Z_Param_time);
+	P_NATIVE_END;
+}
+// End Class ABaseRangeWeapon Function WeaponCooldown
+
+// Begin Class ABaseRangeWeapon Function WeaponReady
+struct Z_Construct_UFunction_ABaseRangeWeapon_WeaponReady_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Weapon/BaseRangeWeapon.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseRangeWeapon_WeaponReady_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseRangeWeapon, nullptr, "WeaponReady", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseRangeWeapon_WeaponReady_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseRangeWeapon_WeaponReady_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ABaseRangeWeapon_WeaponReady()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseRangeWeapon_WeaponReady_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABaseRangeWeapon::execWeaponReady)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->WeaponReady();
+	P_NATIVE_END;
+}
+// End Class ABaseRangeWeapon Function WeaponReady
+
 // Begin Class ABaseRangeWeapon
 void ABaseRangeWeapon::StaticRegisterNativesABaseRangeWeapon()
 {
+	UClass* Class = ABaseRangeWeapon::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WeaponCooldown", &ABaseRangeWeapon::execWeaponCooldown },
+		{ "WeaponReady", &ABaseRangeWeapon::execWeaponReady },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ABaseRangeWeapon);
 UClass* Z_Construct_UClass_ABaseRangeWeapon_NoRegister()
@@ -87,6 +164,11 @@ struct Z_Construct_UClass_ABaseRangeWeapon_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_mReloadSound;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABaseRangeWeapon_WeaponCooldown, "WeaponCooldown" }, // 287349328
+		{ &Z_Construct_UFunction_ABaseRangeWeapon_WeaponReady, "WeaponReady" }, // 3570102457
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABaseRangeWeapon>::IsAbstract,
@@ -127,11 +209,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ABaseRangeWeapon_Static
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ABaseRangeWeapon_Statics::PropPointers,
 	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ABaseRangeWeapon_Statics::PropPointers),
 	UE_ARRAY_COUNT(InterfaceParams),
 	0x009000A4u,
@@ -157,10 +239,10 @@ ABaseRangeWeapon::~ABaseRangeWeapon() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseRangeWeapon, ABaseRangeWeapon::StaticClass, TEXT("ABaseRangeWeapon"), &Z_Registration_Info_UClass_ABaseRangeWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseRangeWeapon), 2460855044U) },
+		{ Z_Construct_UClass_ABaseRangeWeapon, ABaseRangeWeapon::StaticClass, TEXT("ABaseRangeWeapon"), &Z_Registration_Info_UClass_ABaseRangeWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseRangeWeapon), 2828834504U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_908500078(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_232330683(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Weapon_BaseRangeWeapon_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

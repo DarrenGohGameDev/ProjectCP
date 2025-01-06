@@ -44,6 +44,8 @@ void ABullet::BeginPlay()
 
 	mSphere->OnComponentBeginOverlap.AddDynamic(this, &ABullet::OnSphereOverlap);
 
+	currentBulletState = EBulletState::EBS_InUse;
+
 	if (projectileMovementComponent)
 	{
 		projectileMovementComponent->Velocity = GetActorForwardVector() * projectileMovementComponent->InitialSpeed;
@@ -63,6 +65,27 @@ void ABullet::ToggleBullet(bool toggle)
 	SetActorEnableCollision(toggle);
 
 	SetActorHiddenInGame(!toggle);
+
+	NewBullet(toggle);
+}
+
+void ABullet::NewBullet(bool toggle)
+{
+	if (toggle)
+	{
+		currentBulletState = EBulletState::EBS_InUse;
+		GetWorldTimerManager().SetTimer(mBulletLiveTime, this, &ABullet::BulletExpire, bulletAliveDuration);
+	}
+	else
+	{
+		currentBulletState = EBulletState::EBS_NotInUse;
+		GetWorldTimerManager().ClearTimer(mBulletLiveTime);
+	}
+}
+
+void ABullet::BulletExpire()
+{
+	ToggleBullet(false);
 }
 
 
@@ -76,3 +99,5 @@ void ABullet::OnSphereOverlap(UPrimitiveComponent* OverlappedComponent, AActor* 
 		ToggleBullet(false);
 	}
 }
+
+

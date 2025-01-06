@@ -7,6 +7,7 @@
         "Includes": [
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectcp\\definitions.projectcp.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\weapon\\projectile\\bullet.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\bulletstate.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\bullet.generated.h"
         ],
         "ImportedModules": [],

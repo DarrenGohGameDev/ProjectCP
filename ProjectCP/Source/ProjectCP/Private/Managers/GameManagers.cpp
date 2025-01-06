@@ -3,6 +3,8 @@
 
 #include "Managers/GameManagers.h"
 #include "Managers/DelegateManager.h"
+#include "Managers/ObjectPoolingManager.h"
+#include "Weapon/Projectile/Bullet.h"
 
 // Sets default values
 AGameManagers::AGameManagers()
@@ -17,12 +19,25 @@ AGameManagers::AGameManagers()
 void AGameManagers::BeginPlay()
 {
 	Super::BeginPlay();
-	if (GetWorld())
+	UWorld* world = GetWorld();
+	if (world)
 	{
 		mDelegateManager = NewObject<UDelegateManager>(this);
 		if (mDelegateManager)
 		{
 			mDelegateManager->Get();
+		}
+
+		mObjectPoolingManager = NewObject< UObjectPoolingManager>(this);
+		if (mObjectPoolingManager)
+		{
+			
+			mObjectPoolingManager->Get();
+			if (mSpawningBullet)
+			{
+				// after runnnig once one play it never ran again ?? need to check but it cost no bug atm 
+				mObjectPoolingManager->Get()->Init(this, mSpawningBullet, world);
+			}
 		}
 	}
 }

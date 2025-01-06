@@ -63,10 +63,12 @@ private:
 
 	void Shoot();
 
+	UFUNCTION()
 	void WeaponCooldown(float time);
 
 	void WeaponReloadCooldown(float time);
 
+	UFUNCTION()
 	void WeaponReady();
 
 	FORCEINLINE void SetCurrentAmmo() { currentAmmo = maxAmmo; }
