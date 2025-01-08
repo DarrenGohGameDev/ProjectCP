@@ -32,12 +32,6 @@ private :
 	UPROPERTY(EditDefaultsOnly, Category = "UI")
 	TSubclassOf<UPlayerUserWidget> mPlayerUserWidgetClass;
 
-	UPROPERTY(EditDefaultsOnly, Category = "UI")
-	TSubclassOf<UHpBarWidget> mPlayerHpBarWidgetClass;
-
 	UPROPERTY()
 	UPlayerUserWidget* mPlayerOverlay;
-
-	UPROPERTY()
-	UHpBarWidget* mPlayerHpBarUI;
 };

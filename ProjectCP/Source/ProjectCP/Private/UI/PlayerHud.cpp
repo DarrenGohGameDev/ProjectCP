@@ -14,14 +14,11 @@ void APlayerHud::BeginPlay()
 	if (World)
 	{
 		APlayerController* Controller = World->GetFirstPlayerController();
-		if (Controller && mPlayerUserWidgetClass && mPlayerHpBarWidgetClass)
+		if (Controller && mPlayerUserWidgetClass)
 		{
 			mPlayerOverlay = CreateWidget<UPlayerUserWidget>(Controller, mPlayerUserWidgetClass);
+			mPlayerOverlay->Init(Controller->GetPawn());
 			mPlayerOverlay->AddToViewport();
-
-			mPlayerHpBarUI = CreateWidget<UHpBarWidget>(Controller, mPlayerHpBarWidgetClass);
-			mPlayerHpBarUI->Init(Controller->GetPawn());
-			mPlayerHpBarUI->AddToViewport();
 		}
 	}
 }

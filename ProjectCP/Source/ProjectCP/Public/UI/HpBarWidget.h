@@ -29,9 +29,11 @@ public:
 
 private:
 
+	virtual void NativeDestruct() override;
+
 	void ToggleHpBar(bool toggle);
 
 	AActor* mOwner;
-
+	// fading hp ba
 	AActor* mPlayer;
 };

@@ -19,6 +19,7 @@ AGameManagers::AGameManagers()
 void AGameManagers::BeginPlay()
 {
 	Super::BeginPlay();
+
 	UWorld* world = GetWorld();
 	if (world)
 	{
@@ -35,8 +36,10 @@ void AGameManagers::BeginPlay()
 			mObjectPoolingManager->Get();
 			if (mSpawningBullet)
 			{
+				FVector3d spawnLocation = FVector3d(0, -400.f, 0);
+				FRotator spawnRotation = FRotator(0, 0.f, 0);
 				// after runnnig once one play it never ran again ?? need to check but it cost no bug atm 
-				mObjectPoolingManager->Get()->Init(this, mSpawningBullet, world);
+				mObjectPoolingManager->Get()->Init(spawnLocation, spawnRotation, mSpawningBullet, world);
 			}
 		}
 	}

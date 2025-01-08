@@ -56,3 +56,10 @@ void UHitComponent::SetPlayerBaseHp()
 {
 	UDelegateManager::Get()->UpdateHpBarPercent(mHealthComponent->GetCurrentHpPercent(), mOwner);
 }
+
+
+void UHitComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	UDelegateManager::Get()->OnHitActor.RemoveDynamic(this, &UHitComponent::GetHit_Implementation);
+}

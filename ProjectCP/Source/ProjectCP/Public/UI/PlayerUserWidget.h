@@ -6,8 +6,8 @@
 #include "Blueprint/UserWidget.h"
 #include "PlayerUserWidget.generated.h"
 
-
-class UTextBlock;
+class UPlayerAmmoCounterWidget;
+class UHpBarWidget;
 /**
  * 
  */
@@ -16,24 +16,15 @@ class PROJECTCP_API UPlayerUserWidget : public UUserWidget
 {
 	GENERATED_BODY()
 
-public:
+public :
 
-	virtual void NativeConstruct() override;
+	void Init(AActor * UIOwner);
 
-	void SetMaxAmmoText(int32 amount);
-
-	void SetCurrenAmmoText(int32 amount);
-
-	UFUNCTION()
-	void SetAmmoText(int32 maxAmount, int32 currentAmount);
-
-	UFUNCTION()
-	void ToggleThisWidget(bool toggle);
-
-private:
-	UPROPERTY(meta = (BindWidget))
-	UTextBlock* mMaxAmmoText;
+private :
 
 	UPROPERTY(meta = (BindWidget))
-	UTextBlock* mCurrentAmmoText;
+	UPlayerAmmoCounterWidget * playerAmmoWidgetClass;
+
+	UPROPERTY(meta = (BindWidget))
+	UHpBarWidget * playerHpBarWidgetClass;
 };

@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\gameinstancemanager.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\projectcpeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectcp\\definitions.projectcp.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\gameinstance\\gameinstancemanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\gameinstancemanager.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

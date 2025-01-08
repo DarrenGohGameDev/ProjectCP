@@ -41,6 +41,8 @@ private:
 
 	void OnItemOverlap();
 
+	void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+
 	FVector mCameraLocation;
 	
 	UPROPERTY(VisibleInstanceOnly)

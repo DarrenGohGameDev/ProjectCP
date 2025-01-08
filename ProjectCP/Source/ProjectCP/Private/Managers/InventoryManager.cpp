@@ -36,10 +36,15 @@ void UInventoryManager::OnItemOverlap()
 	}
 }
 
+void UInventoryManager::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	UDelegateManager::Get()->OnItemOverlap.RemoveDynamic(this, &UInventoryManager::SetOverlappingItem);
+}
+
 void UInventoryManager::Init(FVector cameraLocation)
 {
 	mCameraLocation = cameraLocation;
-	
 }
 
 void UInventoryManager::PickUpItem()

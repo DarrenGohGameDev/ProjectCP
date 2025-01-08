@@ -14,11 +14,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTCP_PlayerUserWidget_generated_h
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execToggleThisWidget); \
-	DECLARE_FUNCTION(execSetAmmoText);
-
-
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerUserWidget(); \
@@ -46,7 +41,6 @@ public: \
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_17_INCLASS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_17_ENHANCED_CONSTRUCTORS \
 private: \

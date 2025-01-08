@@ -92,6 +92,12 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Character\Enemy\BaseEnemyCharacter.cpp">
       <Filter>Source\ProjectCP\Private\Character\Enemy</Filter>
     </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\GameInstance">
+      <UniqueIdentifier>{63D952D8-F5F9-3134-858D-7065670FFA6A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\GameInstance\GameInstanceManager.cpp">
+      <Filter>Source\ProjectCP\Private\GameInstance</Filter>
+    </ClCompile>
     <Filter Include="Source\ProjectCP\Private\Interface">
       <UniqueIdentifier>{3D30DDEB-2C98-3E6F-A030-E0FA2A014EC5}</UniqueIdentifier>
     </Filter>
@@ -152,11 +158,20 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\UI\MyHUD.cpp">
       <Filter>Source\ProjectCP\Private\UI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerAmmoCounterWidget.cpp">
+      <Filter>Source\ProjectCP\Private\UI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerHud.cpp">
       <Filter>Source\ProjectCP\Private\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\UI\PlayerUserWidget.cpp">
       <Filter>Source\ProjectCP\Private\UI</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\UI\Button">
+      <UniqueIdentifier>{20300995-E9C8-3A82-8D74-59259CEF785B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\UI\Button\LoadLevelButton.cpp">
+      <Filter>Source\ProjectCP\Private\UI\Button</Filter>
     </ClCompile>
     <Filter Include="Source\ProjectCP\Private\Weapon">
       <UniqueIdentifier>{760AEBF3-61B9-320D-85CC-D5F0CCAA6339}</UniqueIdentifier>
@@ -224,11 +239,20 @@
     <Filter Include="Source\ProjectCP\Public\Enums">
       <UniqueIdentifier>{76F002D5-ACA7-3DE9-8A06-8402BF697A37}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\BulletState.h">
+      <Filter>Source\ProjectCP\Public\Enums</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\ItemType.h">
       <Filter>Source\ProjectCP\Public\Enums</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\WeaponState.h">
       <Filter>Source\ProjectCP\Public\Enums</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\GameInstance">
+      <UniqueIdentifier>{10C2BE8F-9AD5-3D91-AEDD-1F2EEAD48038}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\GameInstance\GameInstanceManager.h">
+      <Filter>Source\ProjectCP\Public\GameInstance</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\Interface">
       <UniqueIdentifier>{9F2A749B-9DAA-31BE-8604-7EC4D4BB7387}</UniqueIdentifier>
@@ -290,11 +314,20 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\MyHUD.h">
       <Filter>Source\ProjectCP\Public\UI</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerAmmoCounterWidget.h">
+      <Filter>Source\ProjectCP\Public\UI</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerHud.h">
       <Filter>Source\ProjectCP\Public\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\PlayerUserWidget.h">
       <Filter>Source\ProjectCP\Public\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\UI\Button">
+      <UniqueIdentifier>{C3515473-7106-385E-8B17-23F2181432CC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\UI\Button\LoadLevelButton.h">
+      <Filter>Source\ProjectCP\Public\UI\Button</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\Weapon">
       <UniqueIdentifier>{27ED8ACE-FF2D-3EEC-B92F-25432BFEC350}</UniqueIdentifier>
@@ -307,11 +340,6 @@
     </Filter>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Weapon\Projectile\Bullet.h">
       <Filter>Source\ProjectCP\Public\Weapon\Projectile</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\BulletState.h">
-      <Filter>Source\ProjectCP\Public\Enums</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

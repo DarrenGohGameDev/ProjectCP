@@ -7,8 +7,18 @@
 
 void UHpBarWidget::NativeConstruct()
 {
-	UDelegateManager::Get()->OnHpBarChange.AddDynamic(this, &UHpBarWidget::SetHpBarPercent);
-	
+	Super::NativeConstruct();
+
+	if (!mPlayer)  return;
+
+	if (mPlayer == mOwner)
+	{
+		ToggleHpBar(true);
+	}
+	else
+	{
+		ToggleHpBar(false);
+	}
 }
 
 void UHpBarWidget::Init(AActor* owner)
@@ -19,27 +29,11 @@ void UHpBarWidget::Init(AActor* owner)
 	APlayerController* Controller = World->GetFirstPlayerController();
 
 	mPlayer = Controller->GetPawn();
-
-	UE_LOG(LogTemp, Warning, TEXT("Owner %s"), *owner->GetName());
+	
 }
 
 void UHpBarWidget::SetHpBarPercent(float remainingPercent, AActor* hpBarOwner)
 {
-	if (hpBar)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("actor %s"), *hpBarOwner->GetName());
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("hpBarOwner is NULL!"));
-	}
-
-	/*if (hpBarOwner != mPlayer)
-	{
-		ToggleHpBar(true);
-	}*/
-
-	
 	if (hpBar && hpBarOwner == mOwner)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Minus hp"));
@@ -52,9 +46,19 @@ void UHpBarWidget::ToggleHpBar(bool toggle)
 	if (toggle)
 	{
 		hpBar->SetVisibility(ESlateVisibility::Visible);
+		UDelegateManager::Get()->OnHpBarChange.AddDynamic(this, &UHpBarWidget::SetHpBarPercent);
 	}
 	else
 	{
 		hpBar->SetVisibility(ESlateVisibility::Hidden);
+		UDelegateManager::Get()->OnHpBarChange.RemoveDynamic(this, &UHpBarWidget::SetHpBarPercent);
 	}
+}
+
+
+void UHpBarWidget::NativeDestruct()
+{
+	Super::NativeDestruct();
+
+	UDelegateManager::Get()->OnHpBarChange.RemoveDynamic(this, &UHpBarWidget::SetHpBarPercent);
 }

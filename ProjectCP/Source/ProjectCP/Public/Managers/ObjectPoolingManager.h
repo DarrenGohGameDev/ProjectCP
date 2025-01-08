@@ -20,14 +20,18 @@ public :
 
 	static UObjectPoolingManager* Get();
 
-	void Init(AActor* bulletOwner, TSubclassOf<ABullet> spawningBullet, UWorld * world);
+	void Init(FVector3d spawnLocation, FRotator spawnRotation, TSubclassOf<ABullet> spawningBullet, UWorld * world);
 
 	void GetBullet(AActor * bulletOwner,FVector3d spawnLocation, FRotator spawnRotation);
+
+	void CleanBulletPool();
 
 private :
 	void AddNewBulletToPool(ABullet * bullet);
 
 	void CreateBullet(AActor* bulletOwner, FVector3d spawnLocation, FRotator spawnRotation);
+
+	void CreateBullet(FVector3d spawnLocation, FRotator spawnRotation);
 
 	static UObjectPoolingManager* mInstance;
 
