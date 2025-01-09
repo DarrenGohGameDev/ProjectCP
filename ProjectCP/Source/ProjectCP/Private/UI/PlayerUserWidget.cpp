@@ -7,5 +7,5 @@
 
 void UPlayerUserWidget::Init(AActor* UIOwner)
 {
-	playerHpBarWidgetClass->Init(UIOwner);
+	playerHpBarWidgetLayer->Init(UIOwner);
 }

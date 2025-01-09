@@ -23,8 +23,8 @@ public :
 private :
 
 	UPROPERTY(meta = (BindWidget))
-	UPlayerAmmoCounterWidget * playerAmmoWidgetClass;
+	UPlayerAmmoCounterWidget * playerAmmoWidgetLayer;
 
 	UPROPERTY(meta = (BindWidget))
-	UHpBarWidget * playerHpBarWidgetClass;
+	UHpBarWidget * playerHpBarWidgetLayer;
 };

@@ -28,6 +28,8 @@ public :
 private :
 	void InitManagers(UWorld * world);
 
+	virtual void Shutdown() override;
+
 	UDelegateManager* mDelegateManager;
 
 	UObjectPoolingManager* mObjectPoolingManager;

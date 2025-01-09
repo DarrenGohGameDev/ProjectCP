@@ -18,10 +18,6 @@ public:
 
 	virtual void NativeConstruct() override;
 
-	void SetMaxAmmoText(int32 amount);
-
-	void SetCurrenAmmoText(int32 amount);
-
 	UFUNCTION()
 	void SetAmmoText(int32 maxAmount, int32 currentAmount);
 
@@ -30,10 +26,7 @@ public:
 
 private:
 	UPROPERTY(meta = (BindWidget))
-	UTextBlock* mMaxAmmoText;
-
-	UPROPERTY(meta = (BindWidget))
-	UTextBlock* mCurrentAmmoText;
+	UTextBlock* mAmmoText;
 
 	void NativeDestruct() override;
 };

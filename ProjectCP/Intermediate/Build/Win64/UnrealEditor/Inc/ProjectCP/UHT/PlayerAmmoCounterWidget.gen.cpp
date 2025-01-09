@@ -136,19 +136,13 @@ struct Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics
 		{ "IncludePath", "UI/PlayerAmmoCounterWidget.h" },
 		{ "ModuleRelativePath", "Public/UI/PlayerAmmoCounterWidget.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_mMaxAmmoText_MetaData[] = {
-		{ "BindWidget", "" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/UI/PlayerAmmoCounterWidget.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_mCurrentAmmoText_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_mAmmoText_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/UI/PlayerAmmoCounterWidget.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_mMaxAmmoText;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_mCurrentAmmoText;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_mAmmoText;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -161,11 +155,9 @@ struct Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::NewProp_mMaxAmmoText = { "mMaxAmmoText", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAmmoCounterWidget, mMaxAmmoText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_mMaxAmmoText_MetaData), NewProp_mMaxAmmoText_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::NewProp_mCurrentAmmoText = { "mCurrentAmmoText", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAmmoCounterWidget, mCurrentAmmoText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_mCurrentAmmoText_MetaData), NewProp_mCurrentAmmoText_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::NewProp_mAmmoText = { "mAmmoText", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAmmoCounterWidget, mAmmoText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_mAmmoText_MetaData), NewProp_mAmmoText_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::NewProp_mMaxAmmoText,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::NewProp_mCurrentAmmoText,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::NewProp_mAmmoText,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerAmmoCounterWidget_Statics::DependentSingletons[])() = {
@@ -209,10 +201,10 @@ UPlayerAmmoCounterWidget::~UPlayerAmmoCounterWidget() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerAmmoCounterWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerAmmoCounterWidget, UPlayerAmmoCounterWidget::StaticClass, TEXT("UPlayerAmmoCounterWidget"), &Z_Registration_Info_UClass_UPlayerAmmoCounterWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAmmoCounterWidget), 4148402796U) },
+		{ Z_Construct_UClass_UPlayerAmmoCounterWidget, UPlayerAmmoCounterWidget::StaticClass, TEXT("UPlayerAmmoCounterWidget"), &Z_Registration_Info_UClass_UPlayerAmmoCounterWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAmmoCounterWidget), 3400370075U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerAmmoCounterWidget_h_2056874226(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerAmmoCounterWidget_h_3946565297(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerAmmoCounterWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerAmmoCounterWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

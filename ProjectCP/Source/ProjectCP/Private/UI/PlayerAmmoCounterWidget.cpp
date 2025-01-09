@@ -8,36 +8,15 @@
 void UPlayerAmmoCounterWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
+	UDelegateManager::Get()->OnEquipWeapon.AddDynamic(this, &UPlayerAmmoCounterWidget::ToggleThisWidget);
 	ToggleThisWidget(false);
-}
-
-
-void UPlayerAmmoCounterWidget::SetMaxAmmoText(int32 amount)
-{
-	if (mMaxAmmoText)
-	{
-		mMaxAmmoText->SetText(FText::FromString(FString::Printf(TEXT("%d"), amount)));
-	}
-}
-
-void UPlayerAmmoCounterWidget::SetCurrenAmmoText(int32 amount)
-{
-	if (mCurrentAmmoText)
-	{
-		mCurrentAmmoText->SetText(FText::FromString(FString::Printf(TEXT("%d"), amount)));
-	}
 }
 
 void UPlayerAmmoCounterWidget::SetAmmoText(int32 maxAmount, int32 currentAmount)
 {
-	if (mMaxAmmoText)
+	if (mAmmoText)
 	{
-		mMaxAmmoText->SetText(FText::FromString(FString::Printf(TEXT("%d"), maxAmount)));
-	}
-
-	if (mCurrentAmmoText)
-	{
-		mCurrentAmmoText->SetText(FText::FromString(FString::Printf(TEXT("%d"), currentAmount)));
+		mAmmoText->SetText(FText::Format(NSLOCTEXT("AmmoText", "AmmoFormat", "{0} / {1}"), { currentAmount, maxAmount } ));
 	}
 }
 
@@ -47,13 +26,11 @@ void UPlayerAmmoCounterWidget::ToggleThisWidget(bool toggle)
 	{
 		this->SetVisibility(ESlateVisibility::Visible);
 		UDelegateManager::Get()->OnSetAmmoText.AddDynamic(this, &UPlayerAmmoCounterWidget::SetAmmoText);
-		UDelegateManager::Get()->OnEquipWeapon.AddDynamic(this, &UPlayerAmmoCounterWidget::ToggleThisWidget);
 	}
 	else
 	{
 		this->SetVisibility(ESlateVisibility::Hidden);
 		UDelegateManager::Get()->OnSetAmmoText.RemoveDynamic(this, &UPlayerAmmoCounterWidget::SetAmmoText);
-		UDelegateManager::Get()->OnEquipWeapon.RemoveDynamic(this, &UPlayerAmmoCounterWidget::ToggleThisWidget);
 	}
 }
 

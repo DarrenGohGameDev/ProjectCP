@@ -13,10 +13,12 @@ void UHpBarWidget::NativeConstruct()
 
 	if (mPlayer == mOwner)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Player hp bar"));
 		ToggleHpBar(true);
 	}
 	else
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Enemy hp bar"));
 		ToggleHpBar(false);
 	}
 }
@@ -45,6 +47,7 @@ void UHpBarWidget::ToggleHpBar(bool toggle)
 {
 	if (toggle)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Toggle hp bar"));
 		hpBar->SetVisibility(ESlateVisibility::Visible);
 		UDelegateManager::Get()->OnHpBarChange.AddDynamic(this, &UHpBarWidget::SetHpBarPercent);
 	}

@@ -37,19 +37,19 @@ struct Z_Construct_UClass_UPlayerUserWidget_Statics
 		{ "IncludePath", "UI/PlayerUserWidget.h" },
 		{ "ModuleRelativePath", "Public/UI/PlayerUserWidget.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerAmmoWidgetClass_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerAmmoWidgetLayer_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/UI/PlayerUserWidget.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerHpBarWidgetClass_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_playerHpBarWidgetLayer_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/UI/PlayerUserWidget.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_playerAmmoWidgetClass;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_playerHpBarWidgetClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_playerAmmoWidgetLayer;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_playerHpBarWidgetLayer;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -57,11 +57,11 @@ struct Z_Construct_UClass_UPlayerUserWidget_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerUserWidget_Statics::NewProp_playerAmmoWidgetClass = { "playerAmmoWidgetClass", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerUserWidget, playerAmmoWidgetClass), Z_Construct_UClass_UPlayerAmmoCounterWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerAmmoWidgetClass_MetaData), NewProp_playerAmmoWidgetClass_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerUserWidget_Statics::NewProp_playerHpBarWidgetClass = { "playerHpBarWidgetClass", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerUserWidget, playerHpBarWidgetClass), Z_Construct_UClass_UHpBarWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerHpBarWidgetClass_MetaData), NewProp_playerHpBarWidgetClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerUserWidget_Statics::NewProp_playerAmmoWidgetLayer = { "playerAmmoWidgetLayer", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerUserWidget, playerAmmoWidgetLayer), Z_Construct_UClass_UPlayerAmmoCounterWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerAmmoWidgetLayer_MetaData), NewProp_playerAmmoWidgetLayer_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayerUserWidget_Statics::NewProp_playerHpBarWidgetLayer = { "playerHpBarWidgetLayer", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerUserWidget, playerHpBarWidgetLayer), Z_Construct_UClass_UHpBarWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_playerHpBarWidgetLayer_MetaData), NewProp_playerHpBarWidgetLayer_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerUserWidget_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerUserWidget_Statics::NewProp_playerAmmoWidgetClass,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerUserWidget_Statics::NewProp_playerHpBarWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerUserWidget_Statics::NewProp_playerAmmoWidgetLayer,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerUserWidget_Statics::NewProp_playerHpBarWidgetLayer,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerUserWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerUserWidget_Statics::DependentSingletons[])() = {
@@ -105,10 +105,10 @@ UPlayerUserWidget::~UPlayerUserWidget() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerUserWidget, UPlayerUserWidget::StaticClass, TEXT("UPlayerUserWidget"), &Z_Registration_Info_UClass_UPlayerUserWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerUserWidget), 821804933U) },
+		{ Z_Construct_UClass_UPlayerUserWidget, UPlayerUserWidget::StaticClass, TEXT("UPlayerUserWidget"), &Z_Registration_Info_UClass_UPlayerUserWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerUserWidget), 2142700280U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_1912496526(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_3811026590(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_UI_PlayerUserWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

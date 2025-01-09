@@ -20,9 +20,10 @@ UObjectPoolingManager* UObjectPoolingManager::Get()
 
 void UObjectPoolingManager::Init(FVector3d spawnLocation, FRotator spawnRotation, TSubclassOf<ABullet> spawningBullet, UWorld * world)
 {
-	mSpawningBullet = spawningBullet;
-	mWorld = world;
-	if (mBulletPool.Num() < 10)
+	mInstance->mSpawningBullet = spawningBullet;
+	mInstance->mWorld = world;
+
+	if (mInstance->mBulletPoolArray.Num() < 10)
 	{
 		for (int32 i = 0; i < 10; i++)
 		{
@@ -33,31 +34,12 @@ void UObjectPoolingManager::Init(FVector3d spawnLocation, FRotator spawnRotation
 
 void UObjectPoolingManager::AddNewBulletToPool(ABullet * bullet)
 {
-	mBulletPool.Add(bullet);
+	mInstance->mBulletPoolArray.Add(bullet);
 }
 
 void UObjectPoolingManager::CreateBullet(AActor* bulletOwner, FVector3d spawnLocation, FRotator spawnRotation)
 {
-	if (mWorld)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("world is not null"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("world is null"));
-	}
-
-	if (mSpawningBullet)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("mSpawningBullet is not null"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("mSpawningBullet is null"));
-	}
-	
-	
-	if (mWorld && mSpawningBullet)
+	if (mInstance->mWorld && mInstance->mSpawningBullet)
 	{
 		FActorSpawnParameters bulletSpawnParams;
 		bulletSpawnParams.Owner = bulletOwner;
@@ -65,15 +47,13 @@ void UObjectPoolingManager::CreateBullet(AActor* bulletOwner, FVector3d spawnLoc
 		bulletSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
 		ABullet* newBullet = mWorld->SpawnActor<ABullet>(
-			mSpawningBullet,
+			mInstance->mSpawningBullet,
 			spawnLocation,
 			spawnRotation,
 			bulletSpawnParams
 		);
 
 		newBullet->NewBullet(true);
-
-		UE_LOG(LogTemp, Warning, TEXT("Creating new bullet"));
 
 		AddNewBulletToPool(newBullet);
 	}
@@ -81,32 +61,14 @@ void UObjectPoolingManager::CreateBullet(AActor* bulletOwner, FVector3d spawnLoc
 
 void UObjectPoolingManager::CreateBullet(FVector3d spawnLocation, FRotator spawnRotation)
 {
-	if (mWorld)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("world is not null"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("world is null"));
-	}
 
-	if (mSpawningBullet)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("mSpawningBullet is not null"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("mSpawningBullet is null"));
-	}
-
-
-	if (mWorld && mSpawningBullet)
+	if (mInstance->mWorld && mInstance->mSpawningBullet)
 	{
 		FActorSpawnParameters bulletSpawnParams;
 		bulletSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-		ABullet* newBullet = mWorld->SpawnActor<ABullet>(
-			mSpawningBullet,
+		ABullet* newBullet = mInstance->mWorld->SpawnActor<ABullet>(
+			mInstance->mSpawningBullet,
 			spawnLocation,
 			spawnRotation,
 			bulletSpawnParams
@@ -114,36 +76,47 @@ void UObjectPoolingManager::CreateBullet(FVector3d spawnLocation, FRotator spawn
 
 		newBullet->NewBullet(true);
 
-		UE_LOG(LogTemp, Warning, TEXT("Creating new bullet"));
-
 		AddNewBulletToPool(newBullet);
 	}
 }
 
 void UObjectPoolingManager::CleanBulletPool()
 {
-	for (int32 i = 0; i < mBulletPool.Num(); i++)
+	if (mInstance->mBulletPoolArray.Num() > 0)
 	{
-		mBulletPool[i]->Destroy();
+		TArray<ABullet*> bulletsToDestroy;
+		for (int32 i = 0; i < mInstance->mBulletPoolArray.Num(); i++)
+		{
+			if (IsValid(mInstance->mBulletPoolArray[i]))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Cleaning pool"));
+				bulletsToDestroy.Add(mInstance->mBulletPoolArray[i]);
+			}
+		}
+
+		for (ABullet* bullet : bulletsToDestroy)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Destroying bullet"));
+			bullet->Destroy();
+		}
+
+		UE_LOG(LogTemp, Warning, TEXT("emptying list"));
+		mInstance->mBulletPoolArray.Empty();
 	}
-	mBulletPool.Empty();
 }
 
 void UObjectPoolingManager::GetBullet(AActor* bulletOwner, FVector3d spawnLocation, FRotator spawnRotation)
 {
-	// loop thoruh the array till there is one bullet to use unless dont have we create new one
-	for (int32 i = 0; i < mBulletPool.Num(); i++)
+	for (int32 i = 0; i < mInstance->mBulletPoolArray.Num(); i++)
 	{
-		if (mBulletPool[i]->GetBulletState() == EBulletState::EBS_NotInUse)
+		if (mInstance->mBulletPoolArray[i]->GetBulletState() == EBulletState::EBS_NotInUse)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("using pool"));
-			mBulletPool[i]->SetOwner(bulletOwner);
-			mBulletPool[i]->SetActorLocation(spawnLocation);
-			mBulletPool[i]->ToggleBullet(true);
+			mInstance->mBulletPoolArray[i]->SetOwner(bulletOwner);
+			mInstance->mBulletPoolArray[i]->SetActorLocation(spawnLocation);
+			mInstance->mBulletPoolArray[i]->ToggleBullet(true);
 			return;
 		}	
 	}
 
 	CreateBullet(bulletOwner, spawnLocation, spawnRotation);
-	UE_LOG(LogTemp, Warning, TEXT("Create bullet"));
 }

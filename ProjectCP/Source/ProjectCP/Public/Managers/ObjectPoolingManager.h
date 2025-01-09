@@ -35,7 +35,7 @@ private :
 
 	static UObjectPoolingManager* mInstance;
 
-	TArray<ABullet*> mBulletPool;
+	TArray<ABullet*> mBulletPoolArray;
 
 	TSubclassOf<ABullet> mSpawningBullet;
 

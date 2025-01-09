@@ -19,40 +19,41 @@ UDelegateManager* UDelegateManager::Get()
 
 void UDelegateManager::UpdateItemOverlap(AActor* item)
 {
-	if (OnItemOverlap.IsBound())
+	if (mInstance->OnItemOverlap.IsBound())
 	{
-		OnItemOverlap.Broadcast(item);
+		mInstance->OnItemOverlap.Broadcast(item);
 	}
 }
 
 void UDelegateManager::UpdateWeaponAmmoUI(int32 maxAmount, int32 currentAmount)
 {
-	if (OnSetAmmoText.IsBound())
+	if (mInstance->OnSetAmmoText.IsBound())
 	{
-		OnSetAmmoText.Broadcast(maxAmount, currentAmount);
+		mInstance->OnSetAmmoText.Broadcast(maxAmount, currentAmount);
 	}
 }
 
 void UDelegateManager::ToggleWeaponAmmoUI(bool toggle)
 {
-	if (OnEquipWeapon.IsBound())
+	if (mInstance->OnEquipWeapon.IsBound())
 	{
-		OnEquipWeapon.Broadcast(toggle);
+		mInstance->OnEquipWeapon.Broadcast(toggle);
 	}
 }
 
 void UDelegateManager::HitActor(int32 damage, AActor* hitActor)
 {
-	if (OnHitActor.IsBound())
+	if (mInstance->OnHitActor.IsBound())
 	{
-		OnHitActor.Broadcast(damage,hitActor);
+		mInstance->OnHitActor.Broadcast(damage,hitActor);
 	}
 }
 
 void UDelegateManager::UpdateHpBarPercent(float minusPercent, AActor* hpBarOwner)
 {
-	if (OnHpBarChange.IsBound())
+	if (mInstance->OnHpBarChange.IsBound())
 	{
-		OnHpBarChange.Broadcast(minusPercent, hpBarOwner);
+		UE_LOG(LogTemp, Warning, TEXT("Broadcast hp percent"));
+		mInstance->OnHpBarChange.Broadcast(minusPercent, hpBarOwner);
 	}
 }

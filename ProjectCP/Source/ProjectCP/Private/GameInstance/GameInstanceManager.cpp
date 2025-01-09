@@ -34,9 +34,20 @@ void UGameInstanceManager::InitManagers(UWorld * world)
 		if (mSpawningBullet)
 		{
 			// after runnnig once one play it never ran again ?? need to check but it cost no bug atm 
-			FVector3d spawnLocation = FVector3d(0, -400.f, 0);
+			FVector3d spawnLocation = FVector3d(0, -5400.f, 0);
 			FRotator spawnRotation = FRotator(0, 0.f, 0);
 			mObjectPoolingManager->Get()->Init(spawnLocation, spawnRotation, mSpawningBullet, world);
+			UE_LOG(LogTemp, Warning, TEXT("Manager are created instance created."));
 		}
+	}
+}
+
+void UGameInstanceManager::Shutdown()
+{
+	Super::Shutdown();
+
+	if (mObjectPoolingManager)
+	{
+		mObjectPoolingManager->CleanBulletPool();
 	}
 }
