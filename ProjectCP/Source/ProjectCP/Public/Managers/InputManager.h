@@ -71,5 +71,7 @@ private :
 	void InputLook(const FInputActionValue& value);
 
 	void InputReload(const FInputActionValue& value);
+
+	AActor* mOwner;
 		
 };

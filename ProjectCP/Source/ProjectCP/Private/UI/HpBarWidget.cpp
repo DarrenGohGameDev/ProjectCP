@@ -49,12 +49,12 @@ void UHpBarWidget::ToggleHpBar(bool toggle)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Toggle hp bar"));
 		hpBar->SetVisibility(ESlateVisibility::Visible);
-		UDelegateManager::Get()->OnHpBarChange.AddDynamic(this, &UHpBarWidget::SetHpBarPercent);
+		UDelegateManager::Get()->onHpBarChange.AddDynamic(this, &UHpBarWidget::SetHpBarPercent);
 	}
 	else
 	{
 		hpBar->SetVisibility(ESlateVisibility::Hidden);
-		UDelegateManager::Get()->OnHpBarChange.RemoveDynamic(this, &UHpBarWidget::SetHpBarPercent);
+		UDelegateManager::Get()->onHpBarChange.RemoveDynamic(this, &UHpBarWidget::SetHpBarPercent);
 	}
 }
 
@@ -63,5 +63,5 @@ void UHpBarWidget::NativeDestruct()
 {
 	Super::NativeDestruct();
 
-	UDelegateManager::Get()->OnHpBarChange.RemoveDynamic(this, &UHpBarWidget::SetHpBarPercent);
+	UDelegateManager::Get()->onHpBarChange.RemoveDynamic(this, &UHpBarWidget::SetHpBarPercent);
 }

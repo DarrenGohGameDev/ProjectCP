@@ -22,16 +22,16 @@ UInventoryManager::UInventoryManager()
 void UInventoryManager::BeginPlay()
 {
 	Super::BeginPlay();
-	OnItemOverlap();
+	onItemOverlap();
 	// ...
 	
 }
 
-void UInventoryManager::OnItemOverlap()
+void UInventoryManager::onItemOverlap()
 {
 	if (!mBindPickUp)
 	{
-		UDelegateManager::Get()->OnItemOverlap.AddDynamic(this, &UInventoryManager::SetOverlappingItem);
+		UDelegateManager::Get()->onItemOverlap.AddDynamic(this, &UInventoryManager::SetOverlappingItem);
 		mBindPickUp = true;
 	}
 }
@@ -39,7 +39,7 @@ void UInventoryManager::OnItemOverlap()
 void UInventoryManager::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
-	UDelegateManager::Get()->OnItemOverlap.RemoveDynamic(this, &UInventoryManager::SetOverlappingItem);
+	UDelegateManager::Get()->onItemOverlap.RemoveDynamic(this, &UInventoryManager::SetOverlappingItem);
 }
 
 void UInventoryManager::Init(FVector cameraLocation)

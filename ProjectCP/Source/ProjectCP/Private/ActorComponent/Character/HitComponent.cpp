@@ -23,7 +23,7 @@ void UHitComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	UDelegateManager::Get()->OnHitActor.AddDynamic(this,&UHitComponent::GetHit_Implementation);
+	UDelegateManager::Get()->onHitActor.AddDynamic(this,&UHitComponent::GetHit_Implementation);
 	mOwner = GetOwner();
 
 	SetPlayerBaseHp();
@@ -61,5 +61,5 @@ void UHitComponent::SetPlayerBaseHp()
 void UHitComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
-	UDelegateManager::Get()->OnHitActor.RemoveDynamic(this, &UHitComponent::GetHit_Implementation);
+	UDelegateManager::Get()->onHitActor.RemoveDynamic(this, &UHitComponent::GetHit_Implementation);
 }

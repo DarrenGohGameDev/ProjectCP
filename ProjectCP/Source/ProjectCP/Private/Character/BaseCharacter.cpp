@@ -3,7 +3,7 @@
 
 #include "Character/BaseCharacter.h"
 #include "ActorComponent/Character/HitComponent.h"
-
+#include "ActorComponent/Character/AnimationComponent.h"
 
 // Sets default values
 ABaseCharacter::ABaseCharacter()
@@ -12,6 +12,8 @@ ABaseCharacter::ABaseCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 	
 	hitComponent = CreateDefaultSubobject<UHitComponent>(TEXT("HitComponent"));
+
+	animationComponent = CreateDefaultSubobject< UAnimationComponent>(TEXT("AnimationComponent"));
 
 	GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_EngineTraceChannel1, ECollisionResponse::ECR_Overlap);
 }

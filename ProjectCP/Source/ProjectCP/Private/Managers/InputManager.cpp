@@ -9,6 +9,8 @@
 #include "Managers/CharacterMovementManager.h"
 #include "Managers/WeaponManager.h"
 #include "Managers/InventoryManager.h"
+#include "Enums/LowerBodyAnimationState.h"
+#include "Managers/AnimationDelegateManager.h"
 
 
 // Sets default values for this component's properties
@@ -30,6 +32,7 @@ void UInputManager::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
+	mOwner = GetOwner();
 	
 }
 
@@ -120,6 +123,27 @@ void UInputManager::InputMove(const FInputActionValue& value)
 {
 	const FVector2D MovementVector = value.Get<FVector2D>();
 	characterMovementManager->Move(MovementVector);
+
+	if (mOwner)
+	{
+		if (MovementVector.X > 0)
+		{
+			UAnimationDelegateManager::Get()->UpdateLowerBodyState(ELowerBodyAnimationState::ELBAS_Right, mOwner);
+		}
+		else 
+		{
+			UAnimationDelegateManager::Get()->UpdateLowerBodyState(ELowerBodyAnimationState::ELBAS_Left, mOwner);
+		}
+
+		if (MovementVector.Y > 0)
+		{
+			UAnimationDelegateManager::Get()->UpdateLowerBodyState(ELowerBodyAnimationState::ELBAS_Forward, mOwner);
+		}
+		else
+		{
+			UAnimationDelegateManager::Get()->UpdateLowerBodyState(ELowerBodyAnimationState::ELBAS_Backward, mOwner);
+		}
+	}
 }
 
 void UInputManager::InputLook(const FInputActionValue& value)

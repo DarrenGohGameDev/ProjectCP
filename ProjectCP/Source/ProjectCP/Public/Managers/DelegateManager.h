@@ -26,21 +26,6 @@ class PROJECTCP_API UDelegateManager : public UObject
 public :
 	static UDelegateManager* Get();
 
-	UPROPERTY(BlueprintAssignable, Category = "Events")
-	FOnItemOverlap OnItemOverlap;
-
-	UPROPERTY(BlueprintAssignable, Category = "Events")
-	FSetAmmoText OnSetAmmoText;
-
-	UPROPERTY(BlueprintAssignable, Category = "Events")
-	FOnEquipWeapon OnEquipWeapon;
-
-	UPROPERTY(BlueprintAssignable, Category = "Events")
-	FOnHitActor OnHitActor;
-
-	UPROPERTY(BlueprintAssignable, Category = "Events")
-	FOnChangeHpBarPercent OnHpBarChange;
-
 	void UpdateItemOverlap(AActor* item);
 
 	void UpdateWeaponAmmoUI(int32 maxAmount, int32 currentAmount);
@@ -50,6 +35,21 @@ public :
 	void HitActor(int32 damage, AActor* hitActor);
 
 	void UpdateHpBarPercent(float remainingPercent, AActor* hpBarOwner);
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnItemOverlap onItemOverlap;
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FSetAmmoText onSetAmmoText;
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnEquipWeapon onEquipWeapon;
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnHitActor onHitActor;
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnChangeHpBarPercent onHpBarChange;
 
 private : 
 	static UDelegateManager * mInstance;

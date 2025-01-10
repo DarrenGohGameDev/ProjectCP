@@ -293,10 +293,16 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\StaminaComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Character\AnimationComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Character\HitComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Character\BaseCharacter.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Character\BaseCharacterAnimInstance.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Character\PlayerCharacter.cpp">
@@ -318,6 +324,9 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Item\BaseItem.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\AnimationDelegateManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\AnimationManager.cpp">
@@ -381,18 +390,23 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\ManaComponent.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\ResistanceComponent.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\StaminaComponent.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Character\AnimationComponent.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Character\HitComponent.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Character\BaseCharacter.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Character\BaseCharacterAnimInstance.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Character\PlayerCharacter.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Character\Enemy\BaseEnemyCharacter.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\BulletState.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\CharacterEquipState.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\ItemType.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\LowerBodyAnimationState.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Enums\WeaponState.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\GameInstance\GameInstanceManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\GetHitInterface.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\PickUpInterface.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Interface\RangeWeaponInterface.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Item\BaseItem.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\AnimationDelegateManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\AnimationManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\CharacterMovementManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\DelegateManager.h"/>

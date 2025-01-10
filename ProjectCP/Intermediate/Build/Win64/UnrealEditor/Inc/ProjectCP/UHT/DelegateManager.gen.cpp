@@ -281,32 +281,32 @@ struct Z_Construct_UClass_UDelegateManager_Statics
 		{ "IncludePath", "Managers/DelegateManager.h" },
 		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnItemOverlap_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_onItemOverlap_MetaData[] = {
 		{ "Category", "Events" },
 		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnSetAmmoText_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_onSetAmmoText_MetaData[] = {
 		{ "Category", "Events" },
 		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnEquipWeapon_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_onEquipWeapon_MetaData[] = {
 		{ "Category", "Events" },
 		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnHitActor_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_onHitActor_MetaData[] = {
 		{ "Category", "Events" },
 		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnHpBarChange_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_onHpBarChange_MetaData[] = {
 		{ "Category", "Events" },
 		{ "ModuleRelativePath", "Public/Managers/DelegateManager.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnItemOverlap;
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnSetAmmoText;
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnEquipWeapon;
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnHitActor;
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnHpBarChange;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onItemOverlap;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onSetAmmoText;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onEquipWeapon;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onHitActor;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_onHpBarChange;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -314,17 +314,17 @@ struct Z_Construct_UClass_UDelegateManager_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnItemOverlap = { "OnItemOverlap", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnItemOverlap), Z_Construct_UDelegateFunction_ProjectCP_OnItemOverlap__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnItemOverlap_MetaData), NewProp_OnItemOverlap_MetaData) }; // 112737219
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnSetAmmoText = { "OnSetAmmoText", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnSetAmmoText), Z_Construct_UDelegateFunction_ProjectCP_SetAmmoText__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnSetAmmoText_MetaData), NewProp_OnSetAmmoText_MetaData) }; // 2920830151
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnEquipWeapon = { "OnEquipWeapon", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnEquipWeapon), Z_Construct_UDelegateFunction_ProjectCP_OnEquipWeapon__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnEquipWeapon_MetaData), NewProp_OnEquipWeapon_MetaData) }; // 950719465
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnHitActor = { "OnHitActor", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnHitActor), Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnHitActor_MetaData), NewProp_OnHitActor_MetaData) }; // 14215175
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnHpBarChange = { "OnHpBarChange", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, OnHpBarChange), Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnHpBarChange_MetaData), NewProp_OnHpBarChange_MetaData) }; // 2137172729
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_onItemOverlap = { "onItemOverlap", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, onItemOverlap), Z_Construct_UDelegateFunction_ProjectCP_OnItemOverlap__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_onItemOverlap_MetaData), NewProp_onItemOverlap_MetaData) }; // 112737219
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_onSetAmmoText = { "onSetAmmoText", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, onSetAmmoText), Z_Construct_UDelegateFunction_ProjectCP_SetAmmoText__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_onSetAmmoText_MetaData), NewProp_onSetAmmoText_MetaData) }; // 2920830151
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_onEquipWeapon = { "onEquipWeapon", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, onEquipWeapon), Z_Construct_UDelegateFunction_ProjectCP_OnEquipWeapon__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_onEquipWeapon_MetaData), NewProp_onEquipWeapon_MetaData) }; // 950719465
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_onHitActor = { "onHitActor", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, onHitActor), Z_Construct_UDelegateFunction_ProjectCP_OnHitActor__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_onHitActor_MetaData), NewProp_onHitActor_MetaData) }; // 14215175
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UDelegateManager_Statics::NewProp_onHpBarChange = { "onHpBarChange", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UDelegateManager, onHpBarChange), Z_Construct_UDelegateFunction_ProjectCP_OnChangeHpBarPercent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_onHpBarChange_MetaData), NewProp_onHpBarChange_MetaData) }; // 2137172729
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UDelegateManager_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnItemOverlap,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnSetAmmoText,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnEquipWeapon,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnHitActor,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_OnHpBarChange,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_onItemOverlap,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_onSetAmmoText,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_onEquipWeapon,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_onHitActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UDelegateManager_Statics::NewProp_onHpBarChange,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UDelegateManager_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UDelegateManager_Statics::DependentSingletons[])() = {
@@ -368,10 +368,10 @@ UDelegateManager::~UDelegateManager() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDelegateManager, UDelegateManager::StaticClass, TEXT("UDelegateManager"), &Z_Registration_Info_UClass_UDelegateManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDelegateManager), 1792315464U) },
+		{ Z_Construct_UClass_UDelegateManager, UDelegateManager::StaticClass, TEXT("UDelegateManager"), &Z_Registration_Info_UClass_UDelegateManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDelegateManager), 765798865U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_3564542619(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_3091847570(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

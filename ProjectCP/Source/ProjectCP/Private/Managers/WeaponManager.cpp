@@ -4,6 +4,8 @@
 #include "Managers/WeaponManager.h"
 #include "Weapon/BaseRangeWeapon.h"
 #include "Managers/DelegateManager.h"
+#include "Managers/AnimationDelegateManager.h"
+#include "Enums/CharacterEquipState.h"
 
 
 // Sets default values for this component's properties
@@ -12,8 +14,6 @@ UWeaponManager::UWeaponManager()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-
 	primaryWeapon = nullptr;
 	// ...
 }
@@ -44,6 +44,8 @@ void UWeaponManager::EquipToPrimaryWeapon(ABaseRangeWeapon* newWeapon)
 		UDelegateManager::Get()->ToggleWeaponAmmoUI(true);
 
 		UDelegateManager::Get()->UpdateWeaponAmmoUI(primaryWeapon->GetMaxAmmo_Implementation(), primaryWeapon->GetCurrentAmmo_Implementation());
+
+		UAnimationDelegateManager::Get()->UpdateCharacterEquipState(ECharacterEquipState::ECS_Equip,GetOwner());
 
 		//UE_LOG(LogTemp, Warning, TEXT("location %d"), Get);
 

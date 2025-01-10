@@ -7,6 +7,7 @@
 #include "BaseCharacter.generated.h"
 
 class UHitComponent;
+class UAnimationComponent;
 
 UCLASS()
 class PROJECTCP_API ABaseCharacter : public ACharacter 
@@ -24,6 +25,8 @@ protected:
 	virtual void BeginPlay() override;
 
 	UHitComponent* hitComponent;
+
+	UAnimationComponent* animationComponent;
 
 private:	
 	

@@ -39,7 +39,7 @@ protected:
 
 private:	
 
-	void OnItemOverlap();
+	void onItemOverlap();
 
 	void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 

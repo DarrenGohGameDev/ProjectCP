@@ -8,7 +8,7 @@
 void UPlayerAmmoCounterWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
-	UDelegateManager::Get()->OnEquipWeapon.AddDynamic(this, &UPlayerAmmoCounterWidget::ToggleThisWidget);
+	UDelegateManager::Get()->onEquipWeapon.AddDynamic(this, &UPlayerAmmoCounterWidget::ToggleThisWidget);
 	ToggleThisWidget(false);
 }
 
@@ -25,18 +25,18 @@ void UPlayerAmmoCounterWidget::ToggleThisWidget(bool toggle)
 	if (toggle)
 	{
 		this->SetVisibility(ESlateVisibility::Visible);
-		UDelegateManager::Get()->OnSetAmmoText.AddDynamic(this, &UPlayerAmmoCounterWidget::SetAmmoText);
+		UDelegateManager::Get()->onSetAmmoText.AddDynamic(this, &UPlayerAmmoCounterWidget::SetAmmoText);
 	}
 	else
 	{
 		this->SetVisibility(ESlateVisibility::Hidden);
-		UDelegateManager::Get()->OnSetAmmoText.RemoveDynamic(this, &UPlayerAmmoCounterWidget::SetAmmoText);
+		UDelegateManager::Get()->onSetAmmoText.RemoveDynamic(this, &UPlayerAmmoCounterWidget::SetAmmoText);
 	}
 }
 
 void UPlayerAmmoCounterWidget::NativeDestruct()
 {
 	Super::NativeDestruct();
-	UDelegateManager::Get()->OnSetAmmoText.RemoveDynamic(this, &UPlayerAmmoCounterWidget::SetAmmoText);
-	UDelegateManager::Get()->OnEquipWeapon.RemoveDynamic(this, &UPlayerAmmoCounterWidget::ToggleThisWidget);
+	UDelegateManager::Get()->onSetAmmoText.RemoveDynamic(this, &UPlayerAmmoCounterWidget::SetAmmoText);
+	UDelegateManager::Get()->onEquipWeapon.RemoveDynamic(this, &UPlayerAmmoCounterWidget::ToggleThisWidget);
 }
