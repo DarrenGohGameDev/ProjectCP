@@ -557,6 +557,8 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\customversion.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\icursor.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\iinputinterface.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\lowerbodyanimationstate.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\characterequipstate.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\animationdelegatemanager.generated.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\scriptmacros.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\stack.h",

@@ -32,6 +32,7 @@ void UBaseCharacterAnimInstance::OnUpdateCharacterEquipState(ECharacterEquipStat
 
 void UBaseCharacterAnimInstance::BeginDestroy()
 {
+	Super::BeginDestroy();
 	UAnimationDelegateManager::Get()->onLowerBodyChange.RemoveDynamic(this, &UBaseCharacterAnimInstance::OnUpdateLowerBodyAnimationState);
 	UAnimationDelegateManager::Get()->onEquipChange.RemoveDynamic(this, &UBaseCharacterAnimInstance::OnUpdateCharacterEquipState);
 }

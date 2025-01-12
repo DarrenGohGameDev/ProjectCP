@@ -356,6 +356,18 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\WeaponManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\BaseState.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\StateContext.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\StateMachineDelegateManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\StateManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\UI\EnemyHpBarWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -416,6 +428,10 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\ObjectPoolingManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\StatsManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\WeaponManager.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\BaseState.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\StateContext.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\StateMachineDelegateManager.h"/>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\StateManager.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\EnemyHpBarWidget.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\HpBarWidget.h"/>
     <ClInclude Include="..\..\Source\ProjectCP\Public\UI\MyHUD.h"/>

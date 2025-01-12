@@ -8,6 +8,7 @@
 
 class UHitComponent;
 class UAnimationComponent;
+class UStateManager;
 
 UCLASS()
 class PROJECTCP_API ABaseCharacter : public ACharacter 
@@ -27,6 +28,8 @@ protected:
 	UHitComponent* hitComponent;
 
 	UAnimationComponent* animationComponent;
+
+	UStateManager* stateManager;
 
 private:	
 	

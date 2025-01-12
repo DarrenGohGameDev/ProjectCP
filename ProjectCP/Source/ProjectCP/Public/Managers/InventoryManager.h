@@ -31,8 +31,6 @@ public:
 	UPROPERTY(VisibleInstanceOnly)
 	UWeaponManager* weaponManager;
 
-
-
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

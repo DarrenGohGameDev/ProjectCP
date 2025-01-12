@@ -10,6 +10,7 @@
 class UDelegateManager;
 class UObjectPoolingManager;
 class UAnimationDelegateManager;
+class UStateMachineDelegateManager;
 class ABullet;
 /**
  * 
@@ -36,6 +37,8 @@ private :
 	UObjectPoolingManager* mObjectPoolingManager;
 
 	UAnimationDelegateManager* mAnimationDelegateManager;
+
+	UStateMachineDelegateManager* mStateMachineDelegateManager;
 
 	UPROPERTY(EditAnywhere, Category = "Bullet")
 	TSubclassOf<ABullet> mSpawningBullet;

@@ -155,6 +155,21 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\WeaponManager.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\StateMachine">
+      <UniqueIdentifier>{2836869F-AC4C-3D6E-9069-B80CE526AFFB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\BaseState.cpp">
+      <Filter>Source\ProjectCP\Private\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\StateContext.cpp">
+      <Filter>Source\ProjectCP\Private\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\StateMachineDelegateManager.cpp">
+      <Filter>Source\ProjectCP\Private\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\StateManager.cpp">
+      <Filter>Source\ProjectCP\Private\StateMachine</Filter>
+    </ClCompile>
     <Filter Include="Source\ProjectCP\Private\UI">
       <UniqueIdentifier>{996B5DDC-B19B-3808-897A-B41E8CE8FB50}</UniqueIdentifier>
     </Filter>
@@ -325,6 +340,21 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\WeaponManager.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\StateMachine">
+      <UniqueIdentifier>{29F62811-04D3-3C43-A68A-E9256DDF1193}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\BaseState.h">
+      <Filter>Source\ProjectCP\Public\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\StateContext.h">
+      <Filter>Source\ProjectCP\Public\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\StateMachineDelegateManager.h">
+      <Filter>Source\ProjectCP\Public\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\StateManager.h">
+      <Filter>Source\ProjectCP\Public\StateMachine</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\UI">
       <UniqueIdentifier>{FE7F660A-8ECB-39E2-B750-69F20BCACB45}</UniqueIdentifier>

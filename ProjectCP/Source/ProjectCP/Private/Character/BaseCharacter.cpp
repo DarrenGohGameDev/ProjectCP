@@ -4,6 +4,7 @@
 #include "Character/BaseCharacter.h"
 #include "ActorComponent/Character/HitComponent.h"
 #include "ActorComponent/Character/AnimationComponent.h"
+#include "StateMachine/StateManager.h"
 
 // Sets default values
 ABaseCharacter::ABaseCharacter()
@@ -13,7 +14,9 @@ ABaseCharacter::ABaseCharacter()
 	
 	hitComponent = CreateDefaultSubobject<UHitComponent>(TEXT("HitComponent"));
 
-	animationComponent = CreateDefaultSubobject< UAnimationComponent>(TEXT("AnimationComponent"));
+	animationComponent = CreateDefaultSubobject<UAnimationComponent>(TEXT("AnimationComponent"));
+
+	stateManager = CreateDefaultSubobject<UStateManager>(TEXT("StateManager"));
 
 	GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_EngineTraceChannel1, ECollisionResponse::ECR_Overlap);
 }

@@ -5,6 +5,7 @@
 #include "Managers/DelegateManager.h"
 #include "Managers/ObjectPoolingManager.h"
 #include "Managers/AnimationDelegateManager.h"
+#include "StateMachine/StateMachineDelegateManager.h"
 #include "Weapon/Projectile/Bullet.h"
 
 
@@ -41,10 +42,16 @@ void UGameInstanceManager::InitManagers(UWorld * world)
 		}
 	}
 
-	mAnimationDelegateManager = NewObject< UAnimationDelegateManager>(this);
+	mAnimationDelegateManager = NewObject<UAnimationDelegateManager>(this);
 	if (mAnimationDelegateManager)
 	{
 		mAnimationDelegateManager->Get();
+	}
+
+	mStateMachineDelegateManager = NewObject<UStateMachineDelegateManager>(this);
+	if (mStateMachineDelegateManager)
+	{
+		mStateMachineDelegateManager->Get();
 	}
 }
 
