@@ -18,6 +18,8 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnHitActor, int32, damage, AActor*
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnChangeHpBarPercent, float, remainingPercent, AActor*, hpBarOwner);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnTakeDamage, float, remainingPercent, float&, currentHpPercent, AActor*, owner);
+
 UCLASS()
 class PROJECTCP_API UDelegateManager : public UObject
 {
@@ -34,6 +36,8 @@ public :
 
 	void HitActor(int32 damage, AActor* hitActor);
 
+	void DamageCalculation(float remainingPercent, float& currentHpPercent, AActor* owner);
+
 	void UpdateHpBarPercent(float remainingPercent, AActor* hpBarOwner);
 
 	UPROPERTY(BlueprintAssignable, Category = "Events")
@@ -47,6 +51,9 @@ public :
 
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnHitActor onHitActor;
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnTakeDamage onTakeDamage;
 
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnChangeHpBarPercent onHpBarChange;

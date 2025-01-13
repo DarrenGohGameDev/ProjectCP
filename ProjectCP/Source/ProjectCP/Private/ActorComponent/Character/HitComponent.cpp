@@ -12,7 +12,7 @@ UHitComponent::UHitComponent()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-	mHealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health Component"));
+	//mHealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health Component"));
 	// ...
 }
 
@@ -43,7 +43,8 @@ void UHitComponent::GetHit_Implementation(int32 damage, AActor* hitActor)
 	{
 		float bulletDamage = (float)damage;
 		float newHpPercent;
-		mHealthComponent->TakeDamage(bulletDamage, newHpPercent);
+		UDelegateManager::Get()->DamageCalculation(bulletDamage, newHpPercent, mOwner);
+		//mHealthComponent->TakeDamage(bulletDamage, newHpPercent);
 		UDelegateManager::Get()->UpdateHpBarPercent(newHpPercent, mOwner);
 		if (mHitSound)
 		{
@@ -54,7 +55,7 @@ void UHitComponent::GetHit_Implementation(int32 damage, AActor* hitActor)
 
 void UHitComponent::SetPlayerBaseHp()
 {
-	UDelegateManager::Get()->UpdateHpBarPercent(mHealthComponent->GetCurrentHpPercent(), mOwner);
+	//UDelegateManager::Get()->UpdateHpBarPercent(mHealthComponent->GetCurrentHpPercent(), mOwner);
 }
 
 

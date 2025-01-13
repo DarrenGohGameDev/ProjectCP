@@ -34,9 +34,6 @@ private:
 
 	void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
-	UPROPERTY(VisibleAnywhere)
-	UHealthComponent* mHealthComponent;
-
 	UPROPERTY(EditAnywhere)
 	USoundBase* mHitSound;
 

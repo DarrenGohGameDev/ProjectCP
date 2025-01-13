@@ -9,6 +9,7 @@
 class UHitComponent;
 class UAnimationComponent;
 class UStateManager;
+class UHealthAttributeSet;
 
 UCLASS()
 class PROJECTCP_API ABaseCharacter : public ACharacter 
@@ -26,6 +27,9 @@ protected:
 	virtual void BeginPlay() override;
 
 	UHitComponent* hitComponent;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Animation Component")
+	UHealthAttributeSet* healthStat;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Animation Component")
 	UAnimationComponent* animationComponent;

@@ -14,6 +14,7 @@ ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 PROJECTCP_API UClass* Z_Construct_UClass_ABaseCharacter();
 PROJECTCP_API UClass* Z_Construct_UClass_ABaseCharacter_NoRegister();
 PROJECTCP_API UClass* Z_Construct_UClass_UAnimationComponent_NoRegister();
+PROJECTCP_API UClass* Z_Construct_UClass_UHealthAttributeSet_NoRegister();
 PROJECTCP_API UClass* Z_Construct_UClass_UStateManager_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectCP();
 // End Cross Module References
@@ -35,6 +36,11 @@ struct Z_Construct_UClass_ABaseCharacter_Statics
 		{ "IncludePath", "Character/BaseCharacter.h" },
 		{ "ModuleRelativePath", "Public/Character/BaseCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_healthStat_MetaData[] = {
+		{ "Category", "Animation Component" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Character/BaseCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_animationComponent_MetaData[] = {
 		{ "Category", "Animation Component" },
 		{ "EditInline", "true" },
@@ -46,6 +52,7 @@ struct Z_Construct_UClass_ABaseCharacter_Statics
 		{ "ModuleRelativePath", "Public/Character/BaseCharacter.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_healthStat;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_animationComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_stateManager;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -55,9 +62,11 @@ struct Z_Construct_UClass_ABaseCharacter_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_healthStat = { "healthStat", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, healthStat), Z_Construct_UClass_UHealthAttributeSet_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_healthStat_MetaData), NewProp_healthStat_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_animationComponent = { "animationComponent", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, animationComponent), Z_Construct_UClass_UAnimationComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_animationComponent_MetaData), NewProp_animationComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_stateManager = { "stateManager", nullptr, (EPropertyFlags)0x0020080000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, stateManager), Z_Construct_UClass_UStateManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_stateManager_MetaData), NewProp_stateManager_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseCharacter_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_healthStat,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_animationComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_stateManager,
 };
@@ -102,10 +111,10 @@ ABaseCharacter::~ABaseCharacter() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_BaseCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 2337036976U) },
+		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 3735197486U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_BaseCharacter_h_1140684411(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_BaseCharacter_h_3763103867(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_BaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Character_BaseCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

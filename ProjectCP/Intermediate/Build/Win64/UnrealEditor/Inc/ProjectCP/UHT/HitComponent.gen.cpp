@@ -14,7 +14,6 @@ ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 PROJECTCP_API UClass* Z_Construct_UClass_UGetHitInterface_NoRegister();
-PROJECTCP_API UClass* Z_Construct_UClass_UHealthComponent_NoRegister();
 PROJECTCP_API UClass* Z_Construct_UClass_UHitComponent();
 PROJECTCP_API UClass* Z_Construct_UClass_UHitComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectCP();
@@ -90,17 +89,11 @@ struct Z_Construct_UClass_UHitComponent_Statics
 		{ "IncludePath", "ActorComponent/Character/HitComponent.h" },
 		{ "ModuleRelativePath", "Public/ActorComponent/Character/HitComponent.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_mHealthComponent_MetaData[] = {
-		{ "Category", "HitComponent" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/ActorComponent/Character/HitComponent.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_mHitSound_MetaData[] = {
 		{ "Category", "HitComponent" },
 		{ "ModuleRelativePath", "Public/ActorComponent/Character/HitComponent.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_mHealthComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_mHitSound;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -114,10 +107,8 @@ struct Z_Construct_UClass_UHitComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHitComponent_Statics::NewProp_mHealthComponent = { "mHealthComponent", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UHitComponent, mHealthComponent), Z_Construct_UClass_UHealthComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_mHealthComponent_MetaData), NewProp_mHealthComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHitComponent_Statics::NewProp_mHitSound = { "mHitSound", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UHitComponent, mHitSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_mHitSound_MetaData), NewProp_mHitSound_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UHitComponent_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHitComponent_Statics::NewProp_mHealthComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHitComponent_Statics::NewProp_mHitSound,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UHitComponent_Statics::PropPointers) < 2048);
@@ -164,10 +155,10 @@ UHitComponent::~UHitComponent() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UHitComponent, UHitComponent::StaticClass, TEXT("UHitComponent"), &Z_Registration_Info_UClass_UHitComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHitComponent), 642749051U) },
+		{ Z_Construct_UClass_UHitComponent, UHitComponent::StaticClass, TEXT("UHitComponent"), &Z_Registration_Info_UClass_UHitComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHitComponent), 3971135655U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_1481536263(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_3905099878(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_ActorComponent_Character_HitComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -12,7 +12,7 @@ void UPlayerIdleState::EnterState()
 void UPlayerIdleState::TickState()
 {
 	Super::TickState();
-	UE_LOG(LogTemp, Warning, TEXT("enter Tick state"));
+	//UE_LOG(LogTemp, Warning, TEXT("enter Tick state"));
 }
 
 void UPlayerIdleState::ExitState()

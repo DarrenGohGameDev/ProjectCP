@@ -49,6 +49,14 @@ void UDelegateManager::HitActor(int32 damage, AActor* hitActor)
 	}
 }
 
+void UDelegateManager::DamageCalculation(float remainingPercent, float& currentHpPercent, AActor* owner)
+{
+	if (mInstance->onTakeDamage.IsBound())
+	{
+		mInstance->onTakeDamage.Broadcast(remainingPercent, currentHpPercent, owner);
+	}
+}
+
 void UDelegateManager::UpdateHpBarPercent(float minusPercent, AActor* hpBarOwner)
 {
 	if (mInstance->onHpBarChange.IsBound())

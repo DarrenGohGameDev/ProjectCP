@@ -71,6 +71,12 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\StaminaComponent.cpp">
       <Filter>Source\ProjectCP\Private\ActorComponent\Attribute</Filter>
     </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\ActorComponent\Attribute\GAS">
+      <UniqueIdentifier>{7B860179-4E73-34AB-9319-A6B15D1099B5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\ActorComponent\Attribute\GAS\HealthAttributeSet.cpp">
+      <Filter>Source\ProjectCP\Private\ActorComponent\Attribute\GAS</Filter>
+    </ClCompile>
     <Filter Include="Source\ProjectCP\Private\ActorComponent\Character">
       <UniqueIdentifier>{205E4E34-BBB1-3AD9-949F-6FF62AB7ACFE}</UniqueIdentifier>
     </Filter>
@@ -256,6 +262,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\StaminaComponent.h">
       <Filter>Source\ProjectCP\Public\ActorComponent\Attribute</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\ActorComponent\Attribute\GAS">
+      <UniqueIdentifier>{E28B0F44-D498-3BBF-BEDB-E177AEFA9497}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\ActorComponent\Attribute\GAS\HealthAttributeSet.h">
+      <Filter>Source\ProjectCP\Public\ActorComponent\Attribute\GAS</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\ActorComponent\Character">
       <UniqueIdentifier>{93911FDB-962B-3F8A-999A-66C33B1E6E76}</UniqueIdentifier>

@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectCP_init() {}
 	PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnPickUpItem__DelegateSignature();
 	PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnReloadInput__DelegateSignature();
 	PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnShootInput__DelegateSignature();
+	PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_OnTakeDamage__DelegateSignature();
 	PROJECTCP_API UFunction* Z_Construct_UDelegateFunction_ProjectCP_SetAmmoText__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_ProjectCP;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_ProjectCP()
@@ -40,6 +41,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectCP_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectCP_OnPickUpItem__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectCP_OnReloadInput__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectCP_OnShootInput__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectCP_OnTakeDamage__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectCP_SetAmmoText__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
@@ -47,13 +49,13 @@ void EmptyLinkFunctionForGeneratedCodeProjectCP_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x87B6EC58,
-				0x5523DA13,
+				0x4AA12DA6,
+				0x99D29905,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_ProjectCP.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_ProjectCP.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ProjectCP(Z_Construct_UPackage__Script_ProjectCP, TEXT("/Script/ProjectCP"), Z_Registration_Info_UPackage__Script_ProjectCP, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x87B6EC58, 0x5523DA13));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ProjectCP(Z_Construct_UPackage__Script_ProjectCP, TEXT("/Script/ProjectCP"), Z_Registration_Info_UPackage__Script_ProjectCP, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x4AA12DA6, 0x99D29905));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -5,6 +5,7 @@
 #include "ActorComponent/Character/HitComponent.h"
 #include "ActorComponent/Character/AnimationComponent.h"
 #include "StateMachine/StateManager.h"
+#include "ActorComponent/Attribute/GAS/HealthAttributeSet.h"
 
 // Sets default values
 ABaseCharacter::ABaseCharacter()
@@ -16,7 +17,7 @@ ABaseCharacter::ABaseCharacter()
 
 	animationComponent = CreateDefaultSubobject<UAnimationComponent>(TEXT("AnimationComponent"));
 
-	stateManager = CreateDefaultSubobject<UStateManager>(TEXT("StateManager"));
+	healthStat = CreateDefaultSubobject<UHealthAttributeSet>(TEXT("HealthStat"));
 
 	GetMesh()->SetCollisionResponseToChannel(ECollisionChannel::ECC_EngineTraceChannel1, ECollisionResponse::ECR_Overlap);
 }
@@ -25,8 +26,7 @@ ABaseCharacter::ABaseCharacter()
 void ABaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
-	
+	healthStat->Init(this);
 }
 
 // Called every frame

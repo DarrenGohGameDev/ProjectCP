@@ -35,7 +35,11 @@ PROJECTCP_API void FOnHitActor_DelegateWrapper(const FMulticastScriptDelegate& O
 PROJECTCP_API void FOnChangeHpBarPercent_DelegateWrapper(const FMulticastScriptDelegate& OnChangeHpBarPercent, float remainingPercent, AActor* hpBarOwner);
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_21_DELEGATE \
+PROJECTCP_API void FOnTakeDamage_DelegateWrapper(const FMulticastScriptDelegate& OnTakeDamage, float remainingPercent, float& currentHpPercent, AActor* owner);
+
+
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_26_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUDelegateManager(); \
 	friend struct Z_Construct_UClass_UDelegateManager_Statics; \
@@ -44,7 +48,7 @@ public: \
 	DECLARE_SERIALIZER(UDelegateManager)
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_26_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UDelegateManager(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -58,12 +62,12 @@ public: \
 	NO_API virtual ~UDelegateManager();
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_21_PROLOG
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_24_GENERATED_BODY \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_23_PROLOG
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_26_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_24_INCLASS_NO_PURE_DECLS \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_24_ENHANCED_CONSTRUCTORS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_26_INCLASS_NO_PURE_DECLS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_DelegateManager_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
