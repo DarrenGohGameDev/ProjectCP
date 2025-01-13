@@ -675,7 +675,9 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\customversion.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\icursor.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\iinputinterface.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\delegatemanager.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\delegatemanager.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\inputdelegatemanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\inputdelegatemanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

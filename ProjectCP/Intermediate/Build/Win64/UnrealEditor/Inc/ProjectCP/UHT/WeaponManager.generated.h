@@ -9,10 +9,16 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef PROJECTCP_WeaponManager_generated_h
 #error "WeaponManager.generated.h already included, missing '#pragma once' in WeaponManager.h"
 #endif
 #define PROJECTCP_WeaponManager_generated_h
+
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_WeaponManager_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execReloadCurrentWeapon); \
+	DECLARE_FUNCTION(execUseCurrentWeapon);
+
 
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_WeaponManager_h_14_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +45,7 @@ public: \
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_WeaponManager_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_WeaponManager_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_WeaponManager_h_14_INCLASS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_WeaponManager_h_14_ENHANCED_CONSTRUCTORS \
 private: \

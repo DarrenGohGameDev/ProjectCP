@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 class ABaseItem;
 #ifdef PROJECTCP_InventoryManager_generated_h
 #error "InventoryManager.generated.h already included, missing '#pragma once' in InventoryManager.h"
@@ -16,7 +17,8 @@ class ABaseItem;
 #define PROJECTCP_InventoryManager_generated_h
 
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InventoryManager_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execTriggerTestDelegate);
+	DECLARE_FUNCTION(execTriggerTestDelegate); \
+	DECLARE_FUNCTION(execPickUpItem);
 
 
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InventoryManager_h_16_INCLASS_NO_PURE_DECLS \

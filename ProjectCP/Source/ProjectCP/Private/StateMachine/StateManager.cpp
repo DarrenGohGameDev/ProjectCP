@@ -4,6 +4,7 @@
 #include "StateMachine/StateManager.h"
 #include "StateMachine/BaseState.h"
 #include "StateMachine/StateMachineDelegateManager.h"
+#include "StateMachine/StateContext.h"
 
 // Sets default values for this component's properties
 UStateManager::UStateManager()
@@ -29,10 +30,28 @@ void UStateManager::Init()
 {
 	mOwner = GetOwner();
 
-	for (auto i = allStates.CreateConstIterator(); i; ++i)
+	UBaseState* FirstState = nullptr;
+	if (stateContext)
 	{
-		UBaseState* state = NewObject<UBaseState>(this, i->Value);
-		mCreatedStates.Add(i->Key, state);
+		UStateContext* newStateContext = NewObject<UStateContext>(this, stateContext);
+		newStateContext->SetStateContextOwner(mOwner);
+		// might need to revisit context in the future as now all base state own a copy of context wwould be better if only state manager own it only 
+		for (auto i = allStates.CreateConstIterator(); i; ++i)
+		{
+			UBaseState* state = NewObject<UBaseState>(this, i->Value);
+			state->InitState(newStateContext, mOwner);
+			mCreatedStates.Add(i->Key, state);
+			if (!FirstState)
+			{
+				FirstState = state;
+			}
+		}
+	}
+	
+
+	if (FirstState)
+	{
+		currentState = FirstState;
 	}
 
 	UStateMachineDelegateManager::Get()->onChangeState.AddDynamic(this, &UStateManager::TransitionState);
@@ -43,11 +62,12 @@ void UStateManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if (!currentState) return;
+	
 	if (!isTransitioningState)
 	{
 		currentState->TickState();
 	}
-	
 }
 
 void UStateManager::TransitionState(FString stateKey, AActor* owner)

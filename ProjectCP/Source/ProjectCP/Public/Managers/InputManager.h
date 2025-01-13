@@ -10,8 +10,6 @@
 
 class UInputAction;
 class UInputMappingContext;
-class UCharacterMovementManager;
-class UInventoryManager;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class PROJECTCP_API UInputManager : public UActorComponent
@@ -22,7 +20,7 @@ public:
 	// Sets default values for this component's properties
 	UInputManager();
 
-	void Init(APlayerController * playerController, ACharacter* playerCharacther);
+	void Init(APlayerController * playerController);
 
 protected:
 	// Called when the game starts
@@ -51,11 +49,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	UInputAction* reloadIA;
 
-	UPROPERTY(VisibleInstanceOnly)
-	UCharacterMovementManager* characterMovementManager;
-
-	UPROPERTY(VisibleInstanceOnly)
-	UInventoryManager* characterInventoryManager;
+	
 
 private : 
 	APlayerController * GetOwnerController();

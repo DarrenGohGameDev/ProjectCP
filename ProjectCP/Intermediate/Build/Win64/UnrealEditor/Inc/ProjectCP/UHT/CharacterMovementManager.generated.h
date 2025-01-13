@@ -9,10 +9,17 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef PROJECTCP_CharacterMovementManager_generated_h
 #error "CharacterMovementManager.generated.h already included, missing '#pragma once' in CharacterMovementManager.h"
 #endif
 #define PROJECTCP_CharacterMovementManager_generated_h
+
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_CharacterMovementManager_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execLook); \
+	DECLARE_FUNCTION(execJump); \
+	DECLARE_FUNCTION(execMove);
+
 
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_CharacterMovementManager_h_13_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +46,7 @@ public: \
 #define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_CharacterMovementManager_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_CharacterMovementManager_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_CharacterMovementManager_h_13_INCLASS_NO_PURE_DECLS \
 	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_CharacterMovementManager_h_13_ENHANCED_CONSTRUCTORS \
 private: \

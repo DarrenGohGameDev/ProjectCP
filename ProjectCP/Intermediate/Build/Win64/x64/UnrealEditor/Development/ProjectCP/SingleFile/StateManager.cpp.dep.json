@@ -595,7 +595,9 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\iinputinterface.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\basestate.generated.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\statemachine\\statemachinedelegatemanager.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\statemachinedelegatemanager.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\statemachinedelegatemanager.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\statemachine\\statecontext.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\statecontext.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

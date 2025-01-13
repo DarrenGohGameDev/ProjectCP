@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTCP_BaseState_generated_h
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBaseState(); \
 	friend struct Z_Construct_UClass_UBaseState_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UBaseState)
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UBaseState(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UBaseState();
 
 
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_12_PROLOG
-#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_15_GENERATED_BODY \
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_13_PROLOG
+#define FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_15_INCLASS_NO_PURE_DECLS \
-	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_15_ENHANCED_CONSTRUCTORS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_16_INCLASS_NO_PURE_DECLS \
+	FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_StateMachine_BaseState_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -561,7 +561,9 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\scriptmacros.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\stack.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\enumproperty.h",
-            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\fieldpathproperty.h"
+            "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\fieldpathproperty.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\statemachine\\statecontext.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\statecontext.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

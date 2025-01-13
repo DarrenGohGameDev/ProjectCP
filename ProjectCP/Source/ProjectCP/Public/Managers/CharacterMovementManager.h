@@ -18,11 +18,16 @@ public:
 
 	void Init(AController* playerController,ACharacter* playerCharacther);
 
-	void Move(FVector2D value);
+	UFUNCTION()
+	void Move(FVector2D value, AActor* owner);
 
-	void Jump();
+	UFUNCTION()
+	void Jump(AActor* owner);
 
-	void Look(FVector2D value);
+	UFUNCTION()
+	void Look(FVector2D value, AActor* owner);
+
+	bool IsPlayerFalling();
 
 protected:
 	// Called when the game starts

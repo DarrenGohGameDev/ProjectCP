@@ -27,8 +27,10 @@ protected:
 
 	UHitComponent* hitComponent;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Animation Component")
 	UAnimationComponent* animationComponent;
 
+	UPROPERTY(EditDefaultsOnly, Category = "State Component")
 	UStateManager* stateManager;
 
 private:	

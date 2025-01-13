@@ -605,14 +605,6 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\inputcomponent.h",
             "h:\\unrealengine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\inputcomponent.generated.h",
             "h:\\unrealengine\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputcomponent.generated.h",
-            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\charactermovementmanager.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\charactermovementmanager.generated.h",
-            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\weaponmanager.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\weaponmanager.generated.h",
-            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\inventorymanager.h",
-            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\interface\\pickupinterface.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\pickupinterface.generated.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\inventorymanager.generated.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\lowerbodyanimationstate.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\animationdelegatemanager.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
@@ -646,7 +638,9 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\icursor.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\iinputinterface.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\characterequipstate.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\animationdelegatemanager.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\animationdelegatemanager.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\inputdelegatemanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\inputdelegatemanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -6,12 +6,9 @@
 #include "EnhancedInputComponent.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
-#include "Managers/CharacterMovementManager.h"
-#include "Managers/WeaponManager.h"
-#include "Managers/InventoryManager.h"
 #include "Enums/LowerBodyAnimationState.h"
 #include "Managers/AnimationDelegateManager.h"
-
+#include "Managers/InputDelegateManager.h"
 
 // Sets default values for this component's properties
 UInputManager::UInputManager()
@@ -20,9 +17,9 @@ UInputManager::UInputManager()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	characterMovementManager = CreateDefaultSubobject<UCharacterMovementManager>(TEXT("MovementManager"));
+	
 
-	characterInventoryManager = CreateDefaultSubobject<UInventoryManager>(TEXT("InventoryManager"));
+	
 	// ...
 }
 
@@ -36,9 +33,8 @@ void UInputManager::BeginPlay()
 	
 }
 
-void UInputManager::Init(APlayerController* playerController, ACharacter* playerCharacther)
+void UInputManager::Init(APlayerController* playerController)
 {
-	characterMovementManager->Init(playerController, playerCharacther);
 	SetupInputBinding(playerController);
 }
 
@@ -54,39 +50,34 @@ void UInputManager::SetupInputBinding(APlayerController* playerController)
 
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(playerController->InputComponent))
 	{
-		if (characterMovementManager && characterInventoryManager)
+		if (jumpIA)
 		{
-			// need to refactor this cause all of the manager in an extra include in header so I want them to not have it we can just pass in a function i make
-			// here and call the function here like how i do shoot
-			if (jumpIA)
-			{
-				EnhancedInputComponent->BindAction(jumpIA, ETriggerEvent::Triggered, this, &UInputManager::InputJump);
-			}
+			EnhancedInputComponent->BindAction(jumpIA, ETriggerEvent::Triggered, this, &UInputManager::InputJump);
+		}
 
-			if (walkIA)
-			{
-				EnhancedInputComponent->BindAction(walkIA, ETriggerEvent::Triggered, this, &UInputManager::InputMove);
-			}
+		if (walkIA)
+		{
+			EnhancedInputComponent->BindAction(walkIA, ETriggerEvent::Triggered, this, &UInputManager::InputMove);
+		}
 
-			if (lookIA)
-			{
-				EnhancedInputComponent->BindAction(lookIA, ETriggerEvent::Triggered, this, &UInputManager::InputLook);
-			}
+		if (lookIA)
+		{
+			EnhancedInputComponent->BindAction(lookIA, ETriggerEvent::Triggered, this, &UInputManager::InputLook);
+		}
 
-			if (shootIA)
-			{
-				EnhancedInputComponent->BindAction(shootIA, ETriggerEvent::Triggered, this, &UInputManager::InputUseCurrentWeapon);
-			}
+		if (shootIA)
+		{
+			EnhancedInputComponent->BindAction(shootIA, ETriggerEvent::Triggered, this, &UInputManager::InputUseCurrentWeapon);
+		}
 
-			if (interactIA)
-			{
-				EnhancedInputComponent->BindAction(interactIA, ETriggerEvent::Triggered, this, &UInputManager::InputPickUpItem);
-			}
+		if (interactIA)
+		{
+			EnhancedInputComponent->BindAction(interactIA, ETriggerEvent::Triggered, this, &UInputManager::InputPickUpItem);
+		}
 
-			if (reloadIA)
-			{
-				EnhancedInputComponent->BindAction(reloadIA, ETriggerEvent::Triggered, this, &UInputManager::InputReload);
-			}
+		if (reloadIA)
+		{
+			EnhancedInputComponent->BindAction(reloadIA, ETriggerEvent::Triggered, this, &UInputManager::InputReload);
 		}
 	}
 }
@@ -106,23 +97,24 @@ APlayerController* UInputManager::GetOwnerController()
 
 void UInputManager::InputUseCurrentWeapon(const FInputActionValue& value)
 {
-	characterInventoryManager->weaponManager->UseCurrentWeapon();
+	UInputDelegateManager::Get()->OnTriggerShootInput(mOwner);
 }
 
 void UInputManager::InputPickUpItem(const FInputActionValue& value)
 {
-	characterInventoryManager->PickUpItem();
+	UInputDelegateManager::Get()->OnTriggerPickUpItem(mOwner);
 }
 
 void UInputManager::InputJump(const FInputActionValue& value)
 {
-	characterMovementManager->Jump();
+	UInputDelegateManager::Get()->OnTriggerJumpInput(mOwner);
 }
 
 void UInputManager::InputMove(const FInputActionValue& value)
 {
 	const FVector2D MovementVector = value.Get<FVector2D>();
-	characterMovementManager->Move(MovementVector);
+
+	UInputDelegateManager::Get()->OnTriggerInputMove(MovementVector,mOwner);
 
 	if (mOwner)
 	{
@@ -149,10 +141,10 @@ void UInputManager::InputMove(const FInputActionValue& value)
 void UInputManager::InputLook(const FInputActionValue& value)
 {
 	const FVector2D LookAxisValue = value.Get<FVector2D>();
-	characterMovementManager->Look(LookAxisValue);
+	UInputDelegateManager::Get()->OnTriggerInputLook(LookAxisValue, mOwner);
 }
 
 void UInputManager::InputReload(const FInputActionValue& value)
 {
-	characterInventoryManager->weaponManager->ReloadCurrentWeapon();
+	UInputDelegateManager::Get()->OnTriggerReloadInput(mOwner);
 }

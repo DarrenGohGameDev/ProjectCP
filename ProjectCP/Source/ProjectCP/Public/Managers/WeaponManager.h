@@ -17,11 +17,13 @@ public:
 	// Sets default values for this component's properties
 	UWeaponManager();
 
-	void UseCurrentWeapon();
+	UFUNCTION()
+	void UseCurrentWeapon(AActor* owner);
 
 	void EquipToPrimaryWeapon(ABaseRangeWeapon * newWeapon);
 
-	void ReloadCurrentWeapon();
+	UFUNCTION()
+	void ReloadCurrentWeapon(AActor* owner);
 
 protected:
 	// Called when the game starts

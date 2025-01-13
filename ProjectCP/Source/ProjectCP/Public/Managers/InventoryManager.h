@@ -21,7 +21,8 @@ public:
 
 	void Init(FVector cameraLocation);
 
-	void PickUpItem();
+	UFUNCTION()
+	void PickUpItem(AActor* owner);
 
 	virtual void SetOverlappingItem(AActor* item) override;
 

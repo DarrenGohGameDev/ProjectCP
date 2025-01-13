@@ -6,6 +6,8 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Managers/CharacterMovementManager.h"
+#include "Managers/InventoryManager.h"
 #include "UI/PlayerHud.h"
 
 // Sets default values
@@ -26,14 +28,22 @@ APlayerCharacter::APlayerCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 
 	playerHud = CreateDefaultSubobject<APlayerHud>(TEXT("PlayerHud"));
+
+	characterInventoryManager = CreateDefaultSubobject<UInventoryManager>(TEXT("InventoryManager"));
+
+	characterMovementManager = CreateDefaultSubobject<UCharacterMovementManager>(TEXT("MovementManager"));
 }
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	APlayerController * playerController = Cast<APlayerController>(GetController());
 	
-	inputManager->Init(Cast<APlayerController>(GetController()), this);
+	inputManager->Init(playerController);
+
+	characterMovementManager->Init(playerController, this);
 }
 
 void APlayerCharacter::SetPlayerOverlay()

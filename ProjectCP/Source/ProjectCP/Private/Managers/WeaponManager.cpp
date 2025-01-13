@@ -6,6 +6,7 @@
 #include "Managers/DelegateManager.h"
 #include "Managers/AnimationDelegateManager.h"
 #include "Enums/CharacterEquipState.h"
+#include "Managers/InputDelegateManager.h"
 
 
 // Sets default values for this component's properties
@@ -22,11 +23,13 @@ void UWeaponManager::BeginPlay()
 {
 	Super::BeginPlay();
 
+	UInputDelegateManager::Get()->onShootInput.AddDynamic(this, &UWeaponManager::UseCurrentWeapon);
+	UInputDelegateManager::Get()->onReloadInput.AddDynamic(this, &UWeaponManager::ReloadCurrentWeapon);
 	// ...
 	
 }
 
-void UWeaponManager::UseCurrentWeapon()
+void UWeaponManager::UseCurrentWeapon(AActor* owner)
 {
 	if (primaryWeapon)
 	{
@@ -55,7 +58,7 @@ void UWeaponManager::EquipToPrimaryWeapon(ABaseRangeWeapon* newWeapon)
 	}
 }
 
-void UWeaponManager::ReloadCurrentWeapon()
+void UWeaponManager::ReloadCurrentWeapon(AActor* owner)
 {
 	if (primaryWeapon)
 	{

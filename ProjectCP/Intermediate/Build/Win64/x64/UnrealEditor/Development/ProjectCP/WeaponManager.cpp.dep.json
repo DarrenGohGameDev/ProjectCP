@@ -27,7 +27,9 @@
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\animationdelegatemanager.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\lowerbodyanimationstate.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\characterequipstate.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\animationdelegatemanager.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\animationdelegatemanager.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\inputdelegatemanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\inputdelegatemanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

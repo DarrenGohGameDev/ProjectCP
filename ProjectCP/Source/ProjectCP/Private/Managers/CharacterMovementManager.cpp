@@ -3,6 +3,9 @@
 
 #include "Managers/CharacterMovementManager.h"
 #include "Character/BaseCharacter.h"
+#include "Managers/InputDelegateManager.h"
+#include "StateMachine/StateMachineDelegateManager.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values for this component's properties
 UCharacterMovementManager::UCharacterMovementManager()
@@ -19,7 +22,9 @@ UCharacterMovementManager::UCharacterMovementManager()
 void UCharacterMovementManager::BeginPlay()
 {
 	Super::BeginPlay();
-
+	UInputDelegateManager::Get()->onInputMove.AddDynamic(this, &UCharacterMovementManager::Move);
+	UInputDelegateManager::Get()->onJumpInput.AddDynamic(this, &UCharacterMovementManager::Jump);
+	UInputDelegateManager::Get()->onInputLook.AddDynamic(this, &UCharacterMovementManager::Look);
 	// ...
 	
 }
@@ -31,7 +36,7 @@ void UCharacterMovementManager::Init(AController* playerController,ACharacter* p
 	mPlayerCharacther = playerCharacther;
 }
 
-void UCharacterMovementManager::Move(FVector2D value)
+void UCharacterMovementManager::Move(FVector2D value, AActor* owner)
 {
 	if (mPlayerController)
 	{
@@ -46,20 +51,26 @@ void UCharacterMovementManager::Move(FVector2D value)
 	}
 }
 
-void UCharacterMovementManager::Jump()
+void UCharacterMovementManager::Jump(AActor* owner)
 {
 	if (mPlayerCharacther)
 	{
 		mPlayerCharacther->Jump();
+		UStateMachineDelegateManager::Get()->UpdateState(TEXT("Jump"), owner);
 	}
 }
 
-void UCharacterMovementManager::Look(FVector2D value)
+void UCharacterMovementManager::Look(FVector2D value, AActor* owner)
 {
 	if (mPlayerController)
 	{
 		mPlayerPawn->AddControllerYawInput(value.X);
 		mPlayerPawn->AddControllerPitchInput(value.Y);
 	}
+}
+
+bool UCharacterMovementManager::IsPlayerFalling()
+{
+	return mPlayerCharacther->GetCharacterMovement()->IsFalling();
 }
 

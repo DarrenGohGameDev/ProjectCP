@@ -13,5 +13,12 @@ UCLASS()
 class PROJECTCP_API UStateContext : public UObject
 {
 	GENERATED_BODY()
+
+public :
+	void SetStateContextOwner(AActor* newOwner);
 	
+	FORCEINLINE AActor* GetStateOwner() { return owner; }
+
+protected :
+	AActor* owner;
 };

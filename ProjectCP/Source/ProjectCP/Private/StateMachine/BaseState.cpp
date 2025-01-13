@@ -2,6 +2,7 @@
 
 
 #include "StateMachine/BaseState.h"
+#include "StateMachine/StateContext.h"
 
 void UBaseState::EnterState()
 {
@@ -19,7 +20,8 @@ void UBaseState::ExitState()
 
 }
 
-void UBaseState::GoNextState()
+void UBaseState::InitState(UStateContext* newStateContext, AActor* newOwner)
 {
-
+	stateContext = newStateContext;
+	stateContext->SetStateContextOwner(newOwner);
 }

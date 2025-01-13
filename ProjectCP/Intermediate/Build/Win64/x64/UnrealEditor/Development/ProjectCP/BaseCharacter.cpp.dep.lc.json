@@ -19,7 +19,13 @@
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\actorcomponent\\character\\hitcomponent.h",
             "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\interface\\gethitinterface.h",
             "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\gethitinterface.generated.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\hitcomponent.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\hitcomponent.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\actorcomponent\\character\\animationcomponent.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\lowerbodyanimationstate.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\enums\\characterequipstate.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\animationcomponent.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\statemachine\\statemanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\statemanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -3,3 +3,7 @@
 
 #include "StateMachine/StateContext.h"
 
+void UStateContext::SetStateContextOwner(AActor* newOwner)
+{
+	owner = newOwner;
+}

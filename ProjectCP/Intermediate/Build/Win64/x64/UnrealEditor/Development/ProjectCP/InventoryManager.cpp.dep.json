@@ -27,7 +27,9 @@
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
             "h:\\unrealengine\\ue_5.4\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
-            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\delegatemanager.generated.h"
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\delegatemanager.generated.h",
+            "h:\\ue5project\\projectcp\\projectcp\\source\\projectcp\\public\\managers\\inputdelegatemanager.h",
+            "h:\\ue5project\\projectcp\\projectcp\\intermediate\\build\\win64\\unrealeditor\\inc\\projectcp\\uht\\inputdelegatemanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

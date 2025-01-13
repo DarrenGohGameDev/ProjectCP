@@ -6,6 +6,7 @@
 #include "Managers/ObjectPoolingManager.h"
 #include "Managers/AnimationDelegateManager.h"
 #include "StateMachine/StateMachineDelegateManager.h"
+#include "Managers/InputDelegateManager.h"
 #include "Weapon/Projectile/Bullet.h"
 
 
@@ -52,6 +53,12 @@ void UGameInstanceManager::InitManagers(UWorld * world)
 	if (mStateMachineDelegateManager)
 	{
 		mStateMachineDelegateManager->Get();
+	}
+
+	mInputDelegateManager = NewObject<UInputDelegateManager>(this);
+	if (mInputDelegateManager)
+	{
+		mInputDelegateManager->Get();
 	}
 }
 

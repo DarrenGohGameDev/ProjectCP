@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "Delegates/Delegate.h"
+#include "UObject/ScriptDelegates.h"
 #include "StateMachineDelegateManager.generated.h"
 
 

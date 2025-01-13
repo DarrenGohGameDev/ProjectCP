@@ -140,6 +140,9 @@
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\GameManagers.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InputDelegateManager.cpp">
+      <Filter>Source\ProjectCP\Private\Managers</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\Managers\InputManager.cpp">
       <Filter>Source\ProjectCP\Private\Managers</Filter>
     </ClCompile>
@@ -169,6 +172,21 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\StateManager.cpp">
       <Filter>Source\ProjectCP\Private\StateMachine</Filter>
+    </ClCompile>
+    <Filter Include="Source\ProjectCP\Private\StateMachine\States">
+      <UniqueIdentifier>{0942DDA3-6553-3C42-9B15-0F7CB60B412F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ProjectCP\Private\StateMachine\States\Player">
+      <UniqueIdentifier>{46DC14B7-1C3D-3606-846F-BDB98C399810}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\States\Player\PlayerIdleState.cpp">
+      <Filter>Source\ProjectCP\Private\StateMachine\States\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\States\Player\PlayerJumpState.cpp">
+      <Filter>Source\ProjectCP\Private\StateMachine\States\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ProjectCP\Private\StateMachine\States\Player\PlayerStateContext.cpp">
+      <Filter>Source\ProjectCP\Private\StateMachine\States\Player</Filter>
     </ClCompile>
     <Filter Include="Source\ProjectCP\Private\UI">
       <UniqueIdentifier>{996B5DDC-B19B-3808-897A-B41E8CE8FB50}</UniqueIdentifier>
@@ -326,6 +344,9 @@
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\GameManagers.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InputDelegateManager.h">
+      <Filter>Source\ProjectCP\Public\Managers</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\Managers\InputManager.h">
       <Filter>Source\ProjectCP\Public\Managers</Filter>
     </ClInclude>
@@ -355,6 +376,21 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\StateManager.h">
       <Filter>Source\ProjectCP\Public\StateMachine</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectCP\Public\StateMachine\States">
+      <UniqueIdentifier>{8416481B-3421-348B-8DBE-D4C4853FFD4A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\ProjectCP\Public\StateMachine\States\Player">
+      <UniqueIdentifier>{3B530B00-F813-3ED3-8C65-E35FFEA8B4B4}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\States\Player\PlayerIdleState.h">
+      <Filter>Source\ProjectCP\Public\StateMachine\States\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\States\Player\PlayerJumpState.h">
+      <Filter>Source\ProjectCP\Public\StateMachine\States\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectCP\Public\StateMachine\States\Player\PlayerStateContext.h">
+      <Filter>Source\ProjectCP\Public\StateMachine\States\Player</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectCP\Public\UI">
       <UniqueIdentifier>{FE7F660A-8ECB-39E2-B750-69F20BCACB45}</UniqueIdentifier>

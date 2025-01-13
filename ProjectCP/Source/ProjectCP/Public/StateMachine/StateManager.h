@@ -7,6 +7,7 @@
 #include "StateManager.generated.h"
 
 class UBaseState;
+class UStateContext;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class PROJECTCP_API UStateManager : public UActorComponent
@@ -30,10 +31,15 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "State")
 	TMap<FString,TSubclassOf<UBaseState>> allStates;
 
+	UPROPERTY(EditDefaultsOnly, Category = "State")
+
+	TSubclassOf<UStateContext> stateContext;
+
 	bool isTransitioningState = false;
 
 private:	
-		
+	
+	UFUNCTION()
 	void TransitionState(FString stateKey, AActor* owner);
 
 	bool CheckValidNewState(FString newState, UBaseState*& newBaseState);

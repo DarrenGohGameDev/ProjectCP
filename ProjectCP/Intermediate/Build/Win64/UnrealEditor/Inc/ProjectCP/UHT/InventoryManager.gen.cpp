@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeInventoryManager() {}
 
 // Begin Cross Module References
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 PROJECTCP_API UClass* Z_Construct_UClass_ABaseItem_NoRegister();
 PROJECTCP_API UClass* Z_Construct_UClass_UInventoryManager();
@@ -18,6 +19,48 @@ PROJECTCP_API UClass* Z_Construct_UClass_UPickUpInterface_NoRegister();
 PROJECTCP_API UClass* Z_Construct_UClass_UWeaponManager_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectCP();
 // End Cross Module References
+
+// Begin Class UInventoryManager Function PickUpItem
+struct Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics
+{
+	struct InventoryManager_eventPickUpItem_Parms
+	{
+		AActor* owner;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Managers/InventoryManager.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_owner;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::NewProp_owner = { "owner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InventoryManager_eventPickUpItem_Parms, owner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::NewProp_owner,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UInventoryManager, nullptr, "PickUpItem", nullptr, nullptr, Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::InventoryManager_eventPickUpItem_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::InventoryManager_eventPickUpItem_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UInventoryManager_PickUpItem()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UInventoryManager_PickUpItem_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UInventoryManager::execPickUpItem)
+{
+	P_GET_OBJECT(AActor,Z_Param_owner);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PickUpItem(Z_Param_owner);
+	P_NATIVE_END;
+}
+// End Class UInventoryManager Function PickUpItem
 
 // Begin Class UInventoryManager Function TriggerTestDelegate
 struct Z_Construct_UFunction_UInventoryManager_TriggerTestDelegate_Statics
@@ -67,6 +110,7 @@ void UInventoryManager::StaticRegisterNativesUInventoryManager()
 {
 	UClass* Class = UInventoryManager::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "PickUpItem", &UInventoryManager::execPickUpItem },
 		{ "TriggerTestDelegate", &UInventoryManager::execTriggerTestDelegate },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -100,6 +144,7 @@ struct Z_Construct_UClass_UInventoryManager_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UInventoryManager_PickUpItem, "PickUpItem" }, // 3390182998
 		{ &Z_Construct_UFunction_UInventoryManager_TriggerTestDelegate, "TriggerTestDelegate" }, // 4174778489
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -159,10 +204,10 @@ UInventoryManager::~UInventoryManager() {}
 struct Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InventoryManager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInventoryManager, UInventoryManager::StaticClass, TEXT("UInventoryManager"), &Z_Registration_Info_UClass_UInventoryManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventoryManager), 3499709629U) },
+		{ Z_Construct_UClass_UInventoryManager, UInventoryManager::StaticClass, TEXT("UInventoryManager"), &Z_Registration_Info_UClass_UInventoryManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInventoryManager), 1085146303U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InventoryManager_h_2492028180(TEXT("/Script/ProjectCP"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InventoryManager_h_2304994788(TEXT("/Script/ProjectCP"),
 	Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InventoryManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UE5Project_ProjectCP_ProjectCP_Source_ProjectCP_Public_Managers_InventoryManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

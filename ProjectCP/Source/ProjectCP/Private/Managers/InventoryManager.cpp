@@ -7,6 +7,7 @@
 #include "Enums/ItemType.h"
 #include "Weapon/BaseRangeWeapon.h"
 #include "Managers/DelegateManager.h"
+#include "Managers/InputDelegateManager.h"
 
 // Sets default values for this component's properties
 UInventoryManager::UInventoryManager()
@@ -23,6 +24,7 @@ void UInventoryManager::BeginPlay()
 {
 	Super::BeginPlay();
 	onItemOverlap();
+	UInputDelegateManager::Get()->onPickUpItem.AddDynamic(this, &UInventoryManager::PickUpItem);
 	// ...
 	
 }
@@ -47,7 +49,7 @@ void UInventoryManager::Init(FVector cameraLocation)
 	mCameraLocation = cameraLocation;
 }
 
-void UInventoryManager::PickUpItem()
+void UInventoryManager::PickUpItem(AActor* owner)
 {
 	
 	if (mOverlapItem == nullptr) return;

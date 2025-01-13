@@ -11,6 +11,9 @@ class UInputManager;
 class UCameraComponent;
 class USpringArmComponent;
 class APlayerHud;
+class UInventoryManager;
+class UCharacterMovementManager;
+
 
 UCLASS()
 class PROJECTCP_API APlayerCharacter : public ABaseCharacter
@@ -27,6 +30,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	FORCEINLINE UCharacterMovementManager* GetCharacterMovementManager() { return characterMovementManager; }
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -42,6 +46,12 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category = "UI")
 	APlayerHud* playerHud;
+
+	UPROPERTY(VisibleInstanceOnly)
+	UInventoryManager* characterInventoryManager;
+
+	UPROPERTY(VisibleInstanceOnly)
+	UCharacterMovementManager* characterMovementManager;
 
 private:
 
